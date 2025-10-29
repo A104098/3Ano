@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8" />
+    <!-- Faz o site ser responsivo ajustando o viewport em dispositivos móveis -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Título mostrado na aba do navegador -->
+  <title>Jogo do Galo Coquette ۶۟ৎ</title>
+    <!-- Estilos CSS embutidos para o layout do jogo -->
+  <style>
+        /* Variáveis CSS globais para tamanhos e configurações */
+    :root{
+      --size:600px; /* tamanho total da grelha */
+      --cells:3;    /* número de linhas/colunas */
+      --cell-size: calc(var(--size) / var(--cells));
+      --line: 3px;  /* grossura das linhas (pode ajustar) */
+    }
+        /* Estilos básicos do corpo da página */
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      display:flex;/* centra o conteúdo horizontal/verticalmente */
+      min-height:100vh; /* ocupa a altura total da viewport */
+      align-items:center;
+      justify-content:center;
+      margin:0;  /*remove margens padrão */
+      background:#FF9781;
+    }
+
+    /* Wrapper que contém o tabuleiro e os controlos */
+    .board-wrapper{
+      display:flex;
+      flex-direction:column; /*organiza elementos verticalmente */
+      gap:12px; /*espaçamento entre tabuleiro e controlos */
+      align-items:center; /*centra horizontalmente */
+    }
+    /* O tabuleiro em si, usando grid para 3x3 */
+    .board{
+      width:var(--size); /*largura definida pela variável size */
+      height:var(--size); /*altura definida pela variável size, altura igual à largura */
+      display:grid;
+      grid-template-columns:repeat(var(--cells), 1fr); /*3 colunas iguais */
+      grid-template-rows:repeat(var(--cells), 1fr);/*3 linhas iguais */
+      /* desfaz qualquer espaçamento interno */
+      box-sizing:border-box;
+      background:#FF99AC;
+    }
+        /* Cada célula do tabuleiro */
+    .cell{
+      /* centro do texto na horizontal e vertical */
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:96px; /* grande para X/O tamanho grande para mostrar X/O */
+      user-select:none; /* evita seleção de texto ao clicar */
+      cursor:pointer; /* indica que é clicável */
+      /* linhas a preto delimitadoras (cada célula tem border) */
+      border: var(--line) solid black;
+      box-sizing:border-box;
+      transition:background-color 0.2s ease; /* transição suave ao hover */
+    }
+
+    /* efeito ao passar o rato */
+    .cell:hover{
+      background: #D77374;
+;
+    }
+
+    /* Estado para células já marcadas: desativa o pointer e ajusta opacidade */
+    .cell.taken{
+      cursor:default;
+      opacity:0.95;
+    }
+
+    /* Controlo exterior (botões e status) */
+    .controls{
+      display:flex;
+      gap:8px;
+      align-items:center;
+    }
+
+    button{
+      padding:8px 12px; /*  */
+      font-size:16px;
+      border-radius:6px;
+      border:1px solid #000000;
+      background:#D77374;
+      cursor:pointer;
+    }
+    /* Texto do estado (quem joga / vencedor / empate) */
+    .status{
+      font-size:20px;
+    }
+
+    /* pequena responsividade: mantém grelha mas escala para caber na viewport menor */
+    @media (max-width:640px){
+      :root{--size:90vw;} /* para telemóveis */
+      .cell{font-size:8vw}
+    }
+  </style>
+</head>
+<body>
+  <div class="board-wrapper">
+    <div class="board" id="board" aria-label="Grelha do Jogo do Galo">
+      <!-- 9 células geradas por JavaScript -->
+    </div>
+
+    <div class="controls">
+      <div class="status" id="status">Vez de: X</div>
+      <button id="reset">Reiniciar</button>
+    </div>
+  </div>
+
+  <script>
+    // Cria a grelha 3x3 e aplica comportamentos: alterna X/O, evita sobrescrever e deteta vencedor.
+    const BOARD = document.getElementById('board');
+    const STATUS = document.getElementById('status');
+    const RESET = document.getElementById('reset');
+
+    const CELLS = 9;
+    let turn = 'X';
+    let boardState = Array(CELLS).fill('');
+    let running = true;
+
+    function createCells(){
+      BOARD.innerHTML = '';
+      for(let i=0;i<CELLS;i++){
+        const div = document.createElement('div');
+        div.className = 'cell';
+        div.dataset.index = i;
+        div.setAttribute('role','button');
+        div.setAttribute('aria-label',`Célula ${i+1}`);
+        div.addEventListener('click', onClickCell);
+        BOARD.appendChild(div);
+      }
+    }
+
+    function onClickCell(e){
+      if(!running) return;
+      const idx = Number(e.currentTarget.dataset.index);
+      if(boardState[idx]) return; // já tomada
+
+      boardState[idx] = turn;
+      e.currentTarget.textContent = turn;
+      e.currentTarget.classList.add('taken');
+
+      if(checkWin(turn)){
+        STATUS.textContent = `Vencedor: ${turn}`;
+        running = false;
+        return;
+      }
+
+      if(boardState.every(v=>v)){
+        STATUS.textContent = 'Empate!';
+        running = false;
+        return;
+      }
+
+      turn = turn === 'X' ? 'O' : 'X';
+      STATUS.textContent = `Vez de: ${turn}`;
+    }
+
+    function checkWin(player){
+      const winLines = [
+        [0,1,2], [3,4,5], [6,7,8], // linhas
+        [0,3,6], [1,4,7], [2,5,8], // colunas
+        [0,4,8], [2,4,6]           // diagonais
+      ];
+
+      for(const [a,b,c] of winLines){
+        if(boardState[a] === player && boardState[b] === player && boardState[c] === player){
+          // destaca as células vencedoras
+          [a,b,c].forEach(i => {
+            const cell = BOARD.querySelector(`[data-index='${i}']`);
+            if(cell) cell.style.background = '#d4f7d4';
+          });
+          return true;
+        }
+      }
+      return false;
+    }
+
+    RESET.addEventListener('click', ()=>{
+      boardState.fill('');
+      turn = 'X';
+      running = true;
+      STATUS.textContent = `Vez de: ${turn}`;
+      // remove estilos inline e texto
+      BOARD.querySelectorAll('.cell').forEach(c => {
+        c.textContent = '';
+        c.classList.remove('taken');
+        c.style.background = '';
+      });
+    });
+
+    // inicializa
+    createCells();
+  </script>
+</body>
+</html>

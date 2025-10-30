@@ -34,16 +34,29 @@ class Warehouse {
     public void consume(Set<String> items) {
         l.lock();
         try {
+            Product[]prods = new Product[items.size()];
+            int i = 0;
         for (String s : items)
-            Product p = get(s);
-            while (p.quantity == 0)
-                p.c.await(); // espera pelo produto especifico
-                get(s).quantity--;
+            prods[i++]= get(s);
 
+            for(;;){
+                Product p = missing(prods); //verifica se falta algum produto
+                if (p == null)
+                    break; // se nao faltar nenhum produto sai do ciclo
+                p.cond.await(); // espera pelo produto especifico, e tem um await para saber qual produto esta em falta senao sai do ciclo
+            }
+        
+          /*for(Product p: prods){
+            while (p.quantity <= 0){
+                 p.cond.await(); // espera pelo produto especifico
+            }*/
+            for  (Product p : prods)
+            p.quantity --;
         } finally {
-    }
-        l.unlock();
+            l.unlock();
+            }
         }
 }
 // todas as variaveis de condição sao criadas associadas a um lock apenas (ver video yt de "conditions and lock")
 
+}

@@ -34,8 +34,17 @@ const app = Vue.createApp({
       }
       this.todos.push(todo); //adicionar o todo ao array todos
       this.enteredTodo = ''; //sempre que usarmos o submit limpa o campo de input, "fica mais bonito"
+   },
+   deleteTodo(index) { //exercicio 6
+      this.todos.splice(index, 1); //começa na posicao index e remove 1 elemento,  se pusessemos 2 removeria 2 Todos a partir do index
    }
-}
-});
+  },
+  computed: {
+    //valores caluculados automaticamente com base na data
+    isDisabled() { 
+      return this.enteredTodo.trim() === ''; //retorna true se o enteredTodo for vazio ou só tiver espaços
+    }
+  }
+  });
 //ligar a app Vue ao elemento HTML, dixer-lhe esta aplicação vai ser posta dentro do html
 app.mount('#app'); //exercicio 1

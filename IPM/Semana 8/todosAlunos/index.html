@@ -39,10 +39,15 @@
               type="text"
               > 
               -->
-            <button class="button" type="submit">Add Todo</button>
+            <button 
+            class="button" 
+            type="submit"
+            :disabled=" isDisabled">
+            Add Todo
+          </button>
           </div>
         </form>
-        <ul id="todo-list">
+        <ul id="todo-list" v-if="todos.length > 0"> <!-- Alínea 7: se houver todos, o v-if adiciona/remove o elemento da DOM -->
           <!-- Alínea 3: retire os comentários da <li> abaixo
                e adicione as diretivas vue para renderizar a lista -->
           <li class="todo-list-item"
@@ -50,16 +55,26 @@
             :key="index"> <!-- chave unica para cada elemento-->
           <!-- ^ para cada elemento do array todos, vai criar um <li> com todo aquele conteúdo e poe se o index para ser unico -->
             <p>{{todo}}</p>
-            <button>Delete</button>
+            <button 
+            type="button" 
+            @click="deleteTodo(index)"> <!-- tem por defeito o evento de clicar nele-->
+            Delete
+          </button> <!--chama a função deleteTodo ao clicar "click" no botao-->
           </li>
         </ul>
   
         <!-- Alínea 7: crie um elemento <h3> 
              e adicione as diretivas necessárias a este elemento
              e à lista <ul> acima -->
+        <h3 class=" subtitle no-todos" v-else>No todos for today!</h3> <!--se nao houver nenhum todo, aparece esta mensagem-->
       </div>
     </div>
-
+<!-- opção 2 com v-show: mantem o elemento na DOM e faz display:none
+        <ul id="todo-list" v-show="todos.length > 0">
+          ...
+        </ul>
+        <h3 class=" subtitle no-todos" v-show="todos.length === 0">No todos for today!</h3>
+-->
     <script src="todo.js"></script>
   </body>
 </html>

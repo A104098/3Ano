@@ -102,6 +102,12 @@ html, body {
   color: var(--color-accent);
 }
 
+.button:disabled{
+  cursor: not-allowed;
+  color: var(--color-light);
+  border-style: dashed;
+}
+
 #todo-list {
   padding: 0;
   margin-top: 2rem;

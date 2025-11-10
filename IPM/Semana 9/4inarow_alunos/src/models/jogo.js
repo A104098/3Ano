@@ -179,6 +179,13 @@ export class Jogo {
   O tabuleiro fica vazio, o jogo não terminou, o jogador a jogar é escolhido aleatoriamente e o vencedor é ResultadoJogo.EMPATE (valor irrelevante por agora).
   */
   reset() {
+  this.tabuleiro = [];
+    for (let i = 0; i < Jogo.NUMERO_COLUNAS; i++) {
+      this.tabuleiro.push([]);
+    }
+    this.jogadorAJogar = Math.round(Math.random()) == 0;
+    this.vencedor = null;
+    this.terminado = false;
     
   }
 }

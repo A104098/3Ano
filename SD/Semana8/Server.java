@@ -2,19 +2,37 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 import java.util.Arrays;
 import java.util.HashMap;
 import static java.util.Arrays.asList;
 
 class ContactManager {
+   //por aqui o controlo de concorrencia, para os objetos ficarem encapsulados 
     private HashMap<String, Contact> contacts = new HashMap<>();
 
-    // @TODO
+    // num dos exercicios, nao me lembro qual, tivemos de por um lock
     public void update(Contact c) {
+        l.lock();
+        try {
+            contacts.put(c.name(), c);
+        } finally {
+            l.unlock();
+        }
     }
 
-    // @TODO
-    public ContactList getContacts() { }
+    // exercicio 4
+    public ContactList getContacts() { 
+        l.lock();
+        try {
+            ContactList l = new ContactList();
+            for (String name : contacts.keySet())
+                l.add(contacts.get(name));
+                return l;
+        } finally {
+            l.unlock();
+    }
 }
 
 class ServerWorker implements Runnable {
@@ -30,7 +48,6 @@ class ServerWorker implements Runnable {
     @Override
     public void run() { }
 }
-
 
 
 public class Server {
@@ -50,4 +67,5 @@ public class Server {
         }
     }
 
+}
 }

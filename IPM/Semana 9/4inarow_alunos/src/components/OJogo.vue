@@ -9,31 +9,56 @@ export default {
   },
   data() {
     return {
-      
+     jogo: new Jogo(),
+      numColunas: Jogo.NUMERO_COLUNAS,
+      numLinhas: Jogo.NUMERO_LINHAS
+
     }
   },
   methods: {
     jogar(coluna) {
-      
+      const resultado = this.jogo.jogar(coluna);
+      if (resultado === ResultadoJogada.ERRO_COLUNACHEIA) {
+        alert("Coluna cheia!");
+      }
+      else if (resultado === ResultadoJogada.ERRO_COLUNAINVALIDA) {
+        alert("Coluna inválida!");
+      }
+      else if (resultado=== ResultadoJogada.ERRO_JOGOTERMINADO) {
+        alert("Jogo ja terminou!");
+      }
+      else if (resultado === ResultadoJogada.TERMINOU) {
+        this.$emit('jogo terminou', this.jogo.vencedor);
+      }
+      else if (resultado === ResultadoJogada.SUCESSO) {
+        this.$emit('jogada realizada', this.jogo.jogadorAJogar);
+      }
+
     },
     reset() {
+      this.jogo.reset();
+      this.$emit('jogo reiniciado', this.jogo.jogadorAJogar);
       
     },
     aplicarVermelho(coluna, linha) {
+      return this.jogo.getCelula(coluna, linha) === true;
       
     },
     aplicarAmarelo(coluna, linha) {
-      
+      return this.jogo.getCelula(coluna, linha) === false;
     }
   }
 }
 </script>
-
 <template>
   <div class="tabuleiro">
-    <div v-for="c in numColunas" :key="c" class="coluna">
+    <div v-for="c in numColunas" :key="c" class="coluna" @click="jogar(c - 1)">
       <div v-for="l in numLinhas" :key="l"
         class="celula"
+        :class="{
+          red: aplicarVermelho(c - 1, l - 1),
+          yellow: aplicarAmarelo(c - 1, l - 1)
+        }"
         >
       </div>
     </div>

@@ -100,7 +100,7 @@ export class Jogo {
           return;
         }
         // TODO: Implementar a verificação da diagonal inferior.
-        int diagonalInferior = this.getCoordenadasDiagonalInferior(index, index2)
+        let diagonalInferior = this.getCoordenadasDiagonalInferior(index, index2)
                                  .map((x) => this.getCelulaInterna(x[0],x[1]))
                                  .join("");
         // Ver se alguém venceu na diagonal inferior.

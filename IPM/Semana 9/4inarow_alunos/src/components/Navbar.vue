@@ -1,6 +1,16 @@
 <script>
+import { ResultadoJogada } from '@/models/resultadoJogada';
+import (ResultadoJogada)
 export default {
   props: ['jogadorAJogar', 'vencedor']
+  computed:{
+    texto(){
+      if(this.vencedor == ResultadoJogada.VERMELHO)
+        return "Vencedor: Vermelho";
+      else if(this.vencedor == ResultadoJogada.AMARELO)
+        return "Vencedor: Amarelo";
+    }
+  } 
 }
 </script>
 

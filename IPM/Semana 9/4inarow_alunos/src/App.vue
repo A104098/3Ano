@@ -19,13 +19,27 @@ export default {
     }
   },
   methods: { 
-    
+    alternaJogador(jogador) {
+      this.jogadorAJogar = jogador;
+    },
+    terminaJogo(vencedor) {
+      this.vencedor = vencedor;},
+      reset(jogadorAJogar) {
+        this.vencedor = null;
+        this.jogadorAJogar = jogadorAJogar;
+      }
   }
 }
 </script>
 
 <template>
-  <Navbar  />
+  <Navbar
+  :jogadorAJogar="this.jogadorAJogar"
+  :vencedor="this.vencedor"
+  />
   <OJogo 
-    />
+    @JogadorAJogar="JogadorAJogar"
+    @JogoTerminou="terminaJogo"
+    @reset="reset"
+  />
 </template>

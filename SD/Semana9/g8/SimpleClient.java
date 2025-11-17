@@ -2,6 +2,7 @@ package g8;
 
 import java.net.Socket;
 
+
 public class SimpleClient {
     public static void main(String[] args) throws Exception {
         Socket s = new Socket("localhost", 12345);

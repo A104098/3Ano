@@ -28,6 +28,21 @@ export default {
       
     },
     async updateStatistics() {
+      const winner = this.game.winner;
+      if (winner === GameResult.YELLOW) {
+        this.statistics.yellow += 1;
+      } else if (winner === GameResult.RED) {
+        this.statistics.red += 1;
+      } else {
+        this.statistics.draws += 1;
+      }
+      await fetch('http://localhost:3000/statistics/1', {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(this.statistics)
+      });
       
     },
     async saveGame() {

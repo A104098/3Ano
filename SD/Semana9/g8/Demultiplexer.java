@@ -19,8 +19,14 @@ public class Demultiplexer implements AutoCloseable{
         ArrayDeque<byte[]> queue = new ArrayDeque<>();
     }
 
-    TaggedConnection conn;
-
+    private Entry get(int tag){
+        Entry e = map.get(tag);
+        if (e == null) {
+            e = new Entry();
+            map.put(tag, e);
+        }
+        return e;
+    }
     public Demultiplexer (TaggedConnection conn){
         this.conn = conn;
     }
@@ -29,60 +35,39 @@ public class Demultiplexer implements AutoCloseable{
         new Thread(() -> {
             try{
                 for(;;){
-                    TaggedConnection.Frame f = conn.receive();
+                    Frame f = conn.receive();
                     l.lock();
                     try{
-                        Entry e = map.get(f.tag);
-                        if (e == null) {
-                            e = new Entry();
-                            map.put(f.tag, e);
-                        }
-                        e.queue.addLast(f.data);
-                        e.cond.signalAll();
+                        Entry e = get(f.tag);
+                        e.queue.add(f.data);
+                        e.cond.signal(); //seria um desperdicidio usar signalAll pois só acordo uma thread.
                     } finally{
                         l.unlock();
                     }
                 }
             } catch (IOException e){
-                l.lock();
-                try{
                     ioe = e;
-                    for (Entry ent : map.values())
-                        ent.cond.signalAll();
-                } finally{
-                    l.unlock();
-                }
+                    for (Entry entry : map.values()){
+                        entry.cond.signalAll();
+                } 
             }
         }).start();
     }
 
-    public byte[] receive (int tag) throws IOException{
+    public byte[] receive (int tag) throws IOException, InterruptedException{
         l.lock();
         try{
-            Entry e = map.get(tag);
-            if(e == null){
-                e = new Entry();
-                map.put(tag, e);
+            Entry e = get(tag);
+            while(e.queue.isEmpty() && ioe == null)
+                e.cond.await();
+                byte[] ba = e.queue.poll();
+                if(ba !=null)
+                    return ba;
+                else
+                    throw ioe;
+            }finally{
+                l.unlock();
             }
-            for(;;){
-                if(!e.queue.isEmpty()){
-                    return e.queue.removeFirst();
-                }
-                if(ioe != null) throw ioe;
-                try {
-                    e.cond.await();
-                } catch (InterruptedException ie){
-                    throw new IOException("Interrupted");
-                }
-            }
-        } finally{
-            l.unlock();
-        }
-    }
-
-    @Override
-    public void close() throws IOException {
-        conn.close();
     }
 
 }

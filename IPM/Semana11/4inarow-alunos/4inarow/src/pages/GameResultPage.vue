@@ -1,5 +1,6 @@
 <script>
 import { Game } from "../models/game.js";
+import { useSimulationStore } from "../stores/simulationStore";
 
 export default {
   props: ['id'],

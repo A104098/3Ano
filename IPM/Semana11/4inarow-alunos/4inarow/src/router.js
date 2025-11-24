@@ -25,7 +25,7 @@ const toast = useToast();
 toast.add({
     severity: 'info',
     summary: 'no simulation to show',
-    life: 200
+    life: 2000
 })
 
 return '/game'; //redirecionar para /game

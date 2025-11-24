@@ -53,7 +53,11 @@ export default {
         },
         body: JSON.stringify({
           date: new Date().toISOString(),
-          game: this.game
+          game: {
+            ...this.game,
+            plays: this.simulation.plays,
+            startPlayer: this.simulation.startPlayer
+          }
         })
       });
     },

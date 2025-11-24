@@ -12,6 +12,7 @@ routes: [
   {path: '/simulation', component: SimulationPage},
   {path: '/statistics', component: StatisticsPage},
   {path: '/not-found', component: NotFoundPage},
+  {path: '/game/:id', component: GamePage, props: true},
 ]
 });
 

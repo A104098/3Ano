@@ -17,6 +17,7 @@ public class Demultiplexer implements AutoCloseable{
     private class Entry{
         Condition cond = l.newCondition();
         ArrayDeque<byte[]> queue = new ArrayDeque<>();
+        int waiters = 0;
     }
 
     private Entry get(int tag){
@@ -58,9 +59,14 @@ public class Demultiplexer implements AutoCloseable{
         l.lock();
         try{
             Entry e = get(tag);
-            while(e.queue.isEmpty() && ioe == null)
+            e.waiters += 1;
+            while(e.queue.isEmpty() && ioe == null){}
                 e.cond.await();
+        }
+        e.waiters -= 1; 
                 byte[] ba = e.queue.poll();
+                if(e.waiters == 0 && e.queue.isEmpty())
+                    map.remove(tag);
                 if(ba !=null)
                     return ba;
                 else

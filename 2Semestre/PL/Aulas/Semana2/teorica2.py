@@ -9,3 +9,7 @@ with open('cinema.json', 'r') as file:
 
     if m:
         print(m)
+
+
+    # expressao regular para palavras de 0 ou 1 : 0*1 (0|1)* 
+

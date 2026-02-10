@@ -15,10 +15,6 @@ app.use(createPinia());
 app.mount('#app');
 // TODO: usar PrimeVue e usar um preset
 app.use(PrimeVue, { 
-    theme:
-    {
-        preset: Aura
-    }
     });
 // TODO: registar o ToastService no app
 app.use(ToastService);

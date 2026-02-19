@@ -1,0 +1,66 @@
+# Testes do Projeto
+
+
+Testes Manuais Realizados
+========================
+
+1. Pesquisa e Exploração de Cidades
+-----------------------------------
+• Pesquisar diferentes cidades (Lisboa, Londres, etc.)
+• Explorar bairros/regiões dentro de cada cidade (ex: Soho em Londres, Alfama em Lisboa)
+• Verificar sugestões e seleção de regiões
+• Explorar mais cidades usando o botão "Explorar mais"
+
+2. Filtros e Ordenação
+----------------------
+• Aplicar filtros por tipo de habitação (Apartamento, Quarto, Casa, Estúdio)
+• Ordenar por preço e verificar atualização dos alojamentos
+• Limpar filtros e garantir que todos os alojamentos aparecem
+
+3. Visualização de Alertas e Indicadores
+----------------------------------------
+• Verificar apresentação de alertas 
+• Validar indicadores rápidos (top cidades com mais irregularidades)
+
+4. Casos Emblemáticos
+---------------------
+• Explorar casos emblemáticos (Alfama, Cais do Sodré, etc.)
+• Ver detalhes e gráficos associados a cada caso
+
+5. Mapas e Localização
+----------------------
+• Verificar mapas interativos para cada cidade e região
+• Validar localização correta dos marcadores
+• Testar navegação e zoom no mapa
+
+6. Gráficos e Estatísticas
+--------------------------
+• Visualizar gráficos de: distribuição de proprietários e tipos de alojamento; tendência anual do número de listagens e do preço médio por noite; Tabela de alojamentos em Soho. 
+• Verificar dados comparativos entre cidades/regiões
+
+7. Comparação de Regiões
+------------------------
+• Selecionar duas regiões/cidades para comparar
+• Validar apresentação dos dados comparativos (preço, noites reservadas, avaliação)
+
+8. Exportação de Dados
+----------------------
+• No icone de exportação, testar exportação de resultados em CSV
+• Verificar se os ficheiros exportados contêm os dados corretos
+
+
+9. Navegação e Usabilidade
+-------------------------
+• Navegar entre todas as páginas/views (Home "icone casa", Explorar, Casos, Comparar)
+• Testar botões de voltar, explorar mais, e navegação por sugestões
+
+10. Informações Extras
+•  Navegar o icone de informação "i" para obter informações adicionais relativamente ao projeto
+
+Como Testar
+===========
+1. Instalar dependências: `npm install` (na pasta fase2)
+2. Instalar : "npm install xlsx", para ser possivel extrair dados para o excel
+2. Iniciar aplicação: `npm run dev` 
+3. Seguir os cenários acima, validando cada funcionalidade e explorando a interface
+

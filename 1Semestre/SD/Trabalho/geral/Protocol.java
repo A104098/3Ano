@@ -1,0 +1,437 @@
+package geral;
+
+import java.io.*;
+import java.util.*;
+
+/*
+Protocolo de comunicação partilhado entre cliente e servidor.
+Define operações, requests, responses e eventos.
+ */
+public class Protocol {
+
+    // ==================== CÓDIGOS DE OPERAÇÃO ====================
+
+    public static final byte OP_REGISTER = 0x01; //tipo de pedido que o cliente faz ao servidor
+    public static final byte OP_LOGIN = 0x02;
+    public static final byte OP_LOGOUT = 0x03;
+    public static final byte OP_ADD_EVENT = 0x04;
+    public static final byte OP_QUANTITY_SOLD = 0x05;
+    public static final byte OP_SALES_VOLUME = 0x06;
+    public static final byte OP_AVERAGE_PRICE = 0x07;
+    public static final byte OP_MAX_PRICE = 0x08;
+    public static final byte OP_FILTER_EVENTS = 0x09; //codigo unico do pedido, para ser facilmente identificado
+    public static final byte OP_SIMULTANEOUS_SALES = 0x0A;
+    public static final byte OP_CONSECUTIVE_SALES = 0x0B;
+    public static final byte OP_NEW_DAY = 0x0C;
+
+    // ==================== CÓDIGOS DE STATUS ====================
+
+    public static final byte STATUS_OK = 0x00; //indica o resultado do pedido
+    public static final byte STATUS_ERROR = 0x01; //o status permite saber se o pedido foi bem sucedido ou se houve algum erro
+    public static final byte STATUS_AUTH_FAILED = 0x02;
+    public static final byte STATUS_NOT_AUTHENTICATED = 0x03;
+    public static final byte STATUS_USER_EXISTS = 0x04;
+    public static final byte STATUS_INVALID_PARAMS = 0x05;
+
+    // ==================== CLASSE REQUEST ====================
+    // um id de pedido permite associar respostas a pedidos, especialmente quando há varios pedidos em simultâneos
+    //exemplo: 2 clientes podem ter pedidos diferentes, cada pedido tem um id unico para ser identificado mas a mesma operação logo o mesmo id de operação
+    
+    
+    public static class Request { //representa um pedido do cliente para o servidor
+        private int requestId; //(identificador unico do pedido)
+        private byte operation; //tipo de operação do pedido
+        private Map<String, Object> params;
+
+        public Request(int requestId, byte operation) {
+            this.requestId = requestId;
+            this.operation = operation;
+            this.params = new HashMap<>();
+        }
+
+        public int getRequestId() {
+            return requestId;
+        }
+
+        public byte getOperation() {
+            return operation;
+        }
+
+        public Request setParam(String key, Object value) {
+            params.put(key, value);
+            return this;
+        }
+
+        public String getString(String key) {
+            return (String) params.get(key);
+        }
+
+        public Integer getInt(String key) {
+            return (Integer) params.get(key);
+        }
+
+        public Double getDouble(String key) {
+            return (Double) params.get(key);
+        }
+
+        public List<String> getStringList(String key) {
+            return (List<String>) params.get(key);
+        }
+
+        // CLIENTE usa isto para enviar ao servidor um pedido
+        // o pedido é convertido  em bytes para ser enviado pela rede, pelos sockets (mecanimso que permite comunicar atraves da rede)
+        public void writeTo(DataOutputStream out) throws IOException {
+            out.writeInt(requestId);
+            out.writeByte(operation);
+
+            switch (operation) { //decide que dados enviar conforme o tipo de pedido
+                case OP_REGISTER:
+                case OP_LOGIN:
+                    Serializer.writeString(out, getString("username"));
+                    Serializer.writeString(out, getString("password"));
+                    break;
+
+                case OP_ADD_EVENT:
+                    Serializer.writeString(out, getString("product"));
+                    out.writeInt(getInt("quantity"));
+                    out.writeDouble(getDouble("price"));
+                    break;
+
+                case OP_QUANTITY_SOLD:
+                case OP_SALES_VOLUME:
+                case OP_AVERAGE_PRICE:
+                case OP_MAX_PRICE:
+                    Serializer.writeString(out, getString("product"));
+                    out.writeInt(getInt("days"));
+                    break;
+
+                case OP_FILTER_EVENTS:
+                    Serializer.writeStringList(out, getStringList("products"));
+                    out.writeInt(getInt("dayOffset"));
+                    break;
+
+                case OP_SIMULTANEOUS_SALES:
+                    Serializer.writeString(out, getString("product1"));
+                    Serializer.writeString(out, getString("product2"));
+                    break;
+
+                case OP_CONSECUTIVE_SALES:
+                    out.writeInt(getInt("n"));
+                    break;
+
+                case OP_LOGOUT:
+                case OP_NEW_DAY:
+                    // Sem parâmetros
+                    break;
+            }
+        }
+        // SERVIDOR usa isto para receber os bytes enviados pelo cliente
+        //interpreta os bytes recebidos e reconstrói o pedido original
+        //Processa o pedido (faz o que o cliente pediu).
+        //Cria uma resposta (Response) com o resultado (sucesso, erro, dados, etc.).
+        //Serializa essa resposta e envia-a de volta ao cliente.
+
+        public static Request readFrom(DataInputStream in) throws IOException {
+            int requestId = in.readInt();
+            byte operation = in.readByte();
+            Request req = new Request(requestId, operation);
+
+            switch (operation) {
+                case OP_REGISTER:
+                case OP_LOGIN:
+                    req.setParam("username", Serializer.readString(in));
+                    req.setParam("password", Serializer.readString(in));
+                    break;
+
+                case OP_ADD_EVENT:
+                    req.setParam("product", Serializer.readString(in));
+                    req.setParam("quantity", in.readInt());
+                    req.setParam("price", in.readDouble());
+                    break;
+
+                case OP_QUANTITY_SOLD:
+                case OP_SALES_VOLUME:
+                case OP_AVERAGE_PRICE:
+                case OP_MAX_PRICE:
+                    req.setParam("product", Serializer.readString(in));
+                    req.setParam("days", in.readInt());
+                    break;
+
+                case OP_FILTER_EVENTS:
+                    req.setParam("products", Serializer.readStringList(in));
+                    req.setParam("dayOffset", in.readInt());
+                    break;
+
+                case OP_SIMULTANEOUS_SALES:
+                    req.setParam("product1", Serializer.readString(in));
+                    req.setParam("product2", Serializer.readString(in));
+                    break;
+
+                case OP_CONSECUTIVE_SALES:
+                    req.setParam("n", in.readInt());
+                    break;
+
+                case OP_LOGOUT:
+                case OP_NEW_DAY:
+                    // Sem parâmetros
+                    break;
+            }
+
+            return req;
+        }
+    }
+
+    // ==================== CLASSE RESPONSE ====================
+    public static class Response {
+        private int requestId;
+        private byte status;
+        private String errorMessage;
+        private Map<String, Object> data;
+        public Response(int requestId, byte status) {
+            this.requestId = requestId;
+            this.status = status;
+            this.data = new HashMap<>();
+        }
+
+        public static Response success(int requestId) {
+            return new Response(requestId, STATUS_OK);
+        }
+
+        public static Response error(int requestId, byte status, String message) {
+            Response res = new Response(requestId, status);
+            res.errorMessage = message;
+            return res;
+        }
+
+        public boolean isSuccess() { 
+            return status == STATUS_OK;
+        }
+
+        public String getErrorMessage() {
+            return errorMessage;
+        }
+
+        public Response setData(String key, Object value) {
+            data.put(key, value);
+            return this;
+        }
+
+        public Integer getInt(String key) {
+            return (Integer) data.get(key);
+        }
+
+        public Double getDouble(String key) {
+            return (Double) data.get(key);
+        }
+
+        public Boolean getBoolean(String key) {
+            return (Boolean) data.get(key);
+        }
+
+        public String getString(String key) {
+            return (String) data.get(key);
+        }
+
+        public List<Event> getEventList(String key) {
+            return (List<Event>) data.get(key);
+        }
+
+        // SERVIDOR usa isto para enviar
+        public void writeTo(DataOutputStream out, byte operation) throws IOException {
+            out.writeInt(requestId);
+            out.writeByte(status);
+
+            if (status != STATUS_OK) {
+                Serializer.writeString(out, errorMessage);
+                return;
+            }
+
+            switch (operation) {
+                case OP_REGISTER:
+                case OP_LOGIN:
+                case OP_LOGOUT:
+                case OP_ADD_EVENT:
+                case OP_NEW_DAY:
+                    // Sem dados adicionais
+                    break;
+
+                case OP_QUANTITY_SOLD:
+                    out.writeInt(getInt("quantity"));
+                    break;
+
+                case OP_SALES_VOLUME:
+                    out.writeDouble(getDouble("volume"));
+                    break;
+
+                case OP_AVERAGE_PRICE:
+                    out.writeDouble(getDouble("avgPrice"));
+                    break;
+
+                case OP_MAX_PRICE:
+                    out.writeDouble(getDouble("maxPrice"));
+                    break;
+
+                case OP_SIMULTANEOUS_SALES:
+                    Serializer.writeBoolean(out, getBoolean("result"));
+                    break;
+
+                case OP_CONSECUTIVE_SALES:
+                    Serializer.writeString(out, getString("product"));
+                    break;
+
+                case OP_FILTER_EVENTS:
+                    writeEventList(out, getEventList("events"));
+                    break;
+            }
+        }
+
+        // CLIENTE usa isto para receber
+        public static Response readFrom(DataInputStream in, byte operation) throws IOException {
+            int requestId = in.readInt();
+            byte status = in.readByte();
+            // Lê dados adicionais conforme a operação
+            Response res = new Response(requestId, status);
+// o cliente reconstroi a resposta recebida
+
+            if (status != STATUS_OK) {
+                res.errorMessage = Serializer.readString(in);
+                return res;
+            }
+
+            switch (operation) {
+                case OP_REGISTER:
+                case OP_LOGIN:
+                case OP_LOGOUT:
+                case OP_ADD_EVENT:
+                case OP_NEW_DAY:
+                    // Sem dados adicionais
+                    break;
+
+                case OP_QUANTITY_SOLD:
+                    res.data.put("quantity", in.readInt());
+                    break;
+
+                case OP_SALES_VOLUME:
+                    res.data.put("volume", in.readDouble());
+                    break;
+
+                case OP_AVERAGE_PRICE:
+                    res.data.put("avgPrice", in.readDouble());
+                    break;
+
+                case OP_MAX_PRICE:
+                    res.data.put("maxPrice", in.readDouble());
+                    break;
+
+                case OP_SIMULTANEOUS_SALES:
+                    res.data.put("result", Serializer.readBoolean(in));
+                    break;
+
+                case OP_CONSECUTIVE_SALES:
+                    res.data.put("product", Serializer.readString(in));
+                    break;
+
+                case OP_FILTER_EVENTS:
+                    res.data.put("events", readEventList(in));
+                    break;
+            }
+
+            return res;
+        }
+
+        private static void writeEventList(DataOutputStream out, List<Event> events) throws IOException {
+            if (events == null) {
+                out.writeInt(-1);
+                return;
+            }
+
+            Map<String, Short> productDict = new HashMap<>();
+            List<String> uniqueProducts = new ArrayList<>();
+
+            for (Event event : events) {
+                if (!productDict.containsKey(event.getProduct())) {
+                    productDict.put(event.getProduct(), (short) uniqueProducts.size());
+                    uniqueProducts.add(event.getProduct());
+                }
+            }
+
+            out.writeInt(uniqueProducts.size());
+            for (String product : uniqueProducts) {
+                Serializer.writeString(out, product);
+            }
+
+            out.writeInt(events.size());
+            for (Event event : events) {
+                out.writeShort(productDict.get(event.getProduct()));
+                out.writeInt(event.getQuantity());
+                out.writeDouble(event.getPrice());
+                out.writeLong(event.getTimestamp());
+            }
+        }
+
+        private static List<Event> readEventList(DataInputStream in) throws IOException {
+            int dictSize = in.readInt();
+            if (dictSize == -1) return null;
+
+            String[] productDict = new String[dictSize];
+            for (int i = 0; i < dictSize; i++) {
+                productDict[i] = Serializer.readString(in);
+            }
+
+            int count = in.readInt();
+            List<Event> events = new ArrayList<>(count);
+            for (int i = 0; i < count; i++) {
+                short productIndex = in.readShort();
+                String product = productDict[productIndex];
+                int quantity = in.readInt();
+                double price = in.readDouble();
+                long timestamp = in.readLong();
+                events.add(new Event(product, quantity, price, timestamp));
+            }
+
+            return events;
+        }
+    }
+
+    // ==================== CLASSE EVENT ====================
+
+    public static class Event {
+        private final String product;
+        private final int quantity;
+        private final double price;
+        private final long timestamp;
+// representa um evento de venda
+//usado em operações que envolvem registo ou consulta de eventos de venda
+        public Event(String product, int quantity, double price) {
+            this(product, quantity, price, System.currentTimeMillis());
+        }
+
+        public Event(String product, int quantity, double price, long timestamp) {
+            this.product = product;
+            this.quantity = quantity;
+            this.price = price;
+            this.timestamp = timestamp;
+        }
+
+        public String getProduct() {
+            return product;
+        }
+
+        public int getQuantity() {
+            return quantity;
+        }
+
+        public double getPrice() {
+            return price;
+        }
+
+        public long getTimestamp() {
+            return timestamp;
+        }
+
+        public double getTotalValue() {
+            return quantity * price;
+        }
+    }
+
+}

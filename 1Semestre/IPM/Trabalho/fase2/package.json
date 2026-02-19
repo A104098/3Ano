@@ -1,0 +1,27 @@
+{
+  "name": "ipm-pl2-fase2",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "chart.js": "^4.5.1",
+    "leaflet": "^1.9.4",
+    "pinia": "^3.0.4",
+    "vue": "^3.3.0",
+    "vue-router": "^4.6.3",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/leaflet": "^1.9.21",
+    "@types/vue-router": "^2.0.0",
+    "@vitejs/plugin-vue": "^6.0.3",
+    "esbuild": "^0.27.2",
+    "typescript": "^5.0.0",
+    "vite": "^7.3.0"
+  }
+}

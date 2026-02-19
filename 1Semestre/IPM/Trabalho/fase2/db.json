@@ -1,0 +1,1546 @@
+{
+  "cities": {
+    "londres": {
+      "name": "Londres",
+      "country": "Reino Unido",
+      "averagePrice": 157,
+      "averageNights": 45,
+      "rating": 4.7,
+      "mapImage": "/maps/default.svg",
+      "heroImage": "/london.jpg",
+      "coordinates": { "lat": 51.5074, "lng": -0.1278 },
+      "regions": [
+        {
+          "name": "Westminster",
+          "coordinates": { "lat": 51.5033, "lng": -0.1276 },
+          "averagePrice": 165,
+          "averageNights": 48,
+          "rating": 4.8,
+          "heroImage": "/westminster.jpg",
+          "yearData": [
+            {
+              "year": 2025,
+              "totalListings": 16200,
+              "averagePrice": 165,
+              "averageNights": 48,
+              "occupancyRate": 96.5,
+              "roomTypeDistribution": {
+                "Apartamento": 8200,
+                "Quarto": 5200,
+                "Casa": 1800,
+                "Estúdio": 1000
+              },
+              "topOwnersDistribution": {
+                "Luxahoston BTF": 200,
+                "City Rates": 120,
+                "Background": 80,
+                "Tolsis Hotel": 79,
+                "Lite": 60,
+                "Brin": 40
+              },
+              "monthlyPrices": [140, 145, 150, 155, 160, 165, 170, 168, 163, 158, 152, 147],
+              "monthlyListings": [14000, 14300, 14600, 14900, 15200, 15500, 15800, 16000, 16100, 16150, 16180, 16200]
+            },
+            {
+              "year": 2024,
+              "totalListings": 15200,
+              "averagePrice": 155,
+              "averageNights": 46,
+              "occupancyRate": 95.1,
+              "roomTypeDistribution": {
+                "Apartamento": 7700,
+                "Quarto": 4900,
+                "Casa": 1700,
+                "Estúdio": 900
+              },
+              "monthlyPrices": [132, 138, 142, 148, 152, 158, 162, 160, 154, 148, 140, 138],
+              "monthlyListings": [12800, 13100, 13400, 13700, 14000, 14300, 14600, 14800, 14900, 15000, 15100, 15200],
+              "topOwnersDistribution": {
+                "Luxahoston BTF": 110,
+                "Background": 90,
+                "Tolsis Hotel": 70,
+                "City Rates": 60,
+                "Lite": 50,
+                "Brin": 35
+              }
+            },
+            {
+              "year": 2023,
+              "totalListings": 14000,
+              "averagePrice": 145,
+              "averageNights": 44,
+              "occupancyRate": 93.2,
+              "roomTypeDistribution": {
+                "Apartamento": 7000,
+                "Quarto": 4500,
+                "Casa": 1500,
+                "Estúdio": 1000
+              },
+              "topOwnersDistribution": {
+                "Luxahoston BTF": 95,
+                "Background": 80,
+                "Tolsis Hotel": 65,
+                "City Rates": 55,
+                "Lite": 45,
+                "Brin": 30
+              },
+              "monthlyPrices": [125, 130, 135, 140, 145, 148, 150, 148, 143, 138, 132, 128],
+              "monthlyListings": [11500, 11800, 12100, 12400, 12700, 13000, 13300, 13500, 13600, 13700, 13850, 14000]
+            }
+          ]
+        },
+        {
+          "name": "Soho",
+          "coordinates": { "lat": 51.515, "lng": -0.1315 },
+          "averagePrice": 152,
+          "averageNights": 43,
+          "rating": 4.6,
+          "heroImage": "/soho.jpg",
+          "yearData": [
+            {
+              "year": 2025,
+              "totalListings": 11800,
+              "averagePrice": 152,
+              "averageNights": 43,
+              "occupancyRate": 95.4,
+              "roomTypeDistribution": {
+                "Apartamento": 6200,
+                "Quarto": 3800,
+                "Casa": 1100,
+                "Estúdio": 700
+              },
+              "monthlyPrices": [128, 132, 136, 140, 146, 152, 156, 154, 150, 144, 138, 134],
+              "monthlyListings": [9800, 10050, 10300, 10550, 10800, 11050, 11300, 11450, 11550, 11650, 11750, 11800],
+              "topOwnersDistribution": {
+                "Tolsis Hotel": 85,
+                "City Rates": 70,
+                "Lite": 55,
+                "Brin": 38,
+                "LIkter": 25,
+                "Background": 20
+              }
+            },
+            {
+              "year": 2024,
+              "totalListings": 10800,
+              "averagePrice": 142,
+              "averageNights": 41,
+              "occupancyRate": 93.2,
+              "roomTypeDistribution": {
+                "Apartamento": 5700,
+                "Quarto": 3500,
+                "Casa": 950,
+                "Estúdio": 650
+              },
+              "monthlyPrices": [120, 124, 128, 132, 136, 142, 146, 144, 140, 134, 128, 124],
+              "monthlyListings": [8800, 9050, 9300, 9550, 9800, 10050, 10300, 10450, 10550, 10650, 10750, 10800],
+              "topOwnersDistribution": {
+                "Tolsis Hotel": 75,
+                "City Rates": 60,
+                "Lite": 50,
+                "Brin": 35,
+                "LIkter": 22,
+                "Background": 18
+              }
+            },
+            {
+              "year": 2023,
+              "totalListings": 9800,
+              "averagePrice": 134,
+              "averageNights": 39,
+              "occupancyRate": 91.5,
+              "roomTypeDistribution": {
+                "Apartamento": 5200,
+                "Quarto": 3200,
+                "Casa": 850,
+                "Estúdio": 550
+              },
+              "monthlyPrices": [112, 116, 120, 124, 128, 134, 138, 136, 132, 126, 120, 116],
+              "monthlyListings": [8000, 8200, 8400, 8600, 8800, 9000, 9200, 9350, 9450, 9550, 9650, 9800],
+              "topOwnersDistribution": {
+                "Tolsis Hotel": 65,
+                "City Rates": 55,
+                "Lite": 45,
+                "Brin": 30,
+                "LIkter": 20,
+                "Background": 15
+              }
+
+            }
+          ]
+        },
+        {
+          "name": "Kensington",
+          "coordinates": { "lat": 51.501, "lng": -0.1763 },
+          "averagePrice": 160,
+          "averageNights": 46,
+          "rating": 4.7,
+          "heroImage": "/kensington.jpg",
+          "yearData": [
+            {
+              "year": 2025,
+              "totalListings": 13200,
+              "averagePrice": 160,
+              "averageNights": 46,
+              "occupancyRate": 96.0,
+              "roomTypeDistribution": {
+                "Apartamento": 6600,
+                "Quarto": 4200,
+                "Casa": 1600,
+                "Estúdio": 800
+              },
+              "monthlyPrices": [135, 140, 145, 150, 155, 160, 165, 163, 158, 152, 146, 140],
+              "monthlyListings": [11000, 11300, 11600, 11900, 12200, 12450, 12650, 12800, 12900, 13000, 13100, 13200],
+              "topOwnersDistribution": {
+                "Lite":  90,
+                "Brin":  70,
+                "Luxahoston BTF":  60,
+                "Background":  50,
+                "Tolsis Hotel":  40,
+                "City Rates":  30
+              }
+            },
+            {
+              "year": 2024,
+              "totalListings": 12200,
+              "averagePrice": 150,
+              "averageNights": 44,
+              "occupancyRate": 94.1,
+              "roomTypeDistribution": {
+                "Apartamento": 6100,
+                "Quarto": 3900,
+                "Casa": 1500,
+                "Estúdio": 700
+              },
+              "monthlyPrices": [128, 133, 138, 142, 146, 150, 155, 152, 148, 142, 136, 132],
+              "monthlyListings": [10100, 10350, 10600, 10850, 11100, 11300, 11450, 11600, 11700, 11800, 12000, 12200],
+              "topOwnersDistribution": {
+                "Lite":  80,
+                "Brin":  60,
+                "Luxahoston BTF":  55,
+                "Background":  45,
+                "Tolsis Hotel":  35,
+                "City Rates":  25
+              }
+            },
+            {
+              "year": 2023,
+              "totalListings": 11200,
+              "averagePrice": 142,
+              "averageNights": 42,
+              "occupancyRate": 92.3,
+              "roomTypeDistribution": {
+                "Apartamento": 5600,
+                "Quarto": 3600,
+                "Casa": 1400,
+                "Estúdio": 600
+              },
+              "monthlyPrices": [120, 125, 130, 134, 138, 142, 146, 144, 140, 134, 128, 124],
+              "monthlyListings": [9300, 9500, 9700, 9900, 10100, 10300, 10450, 10600, 10700, 10800, 11000, 11200],
+              "topOwnersDistribution": {
+                "Lite":  70,
+                "Brin":  50,
+                "Luxahoston BTF":  50,
+                "Background":  40,
+                "Tolsis Hotel":  30,
+                "City Rates":  20
+              }
+            }
+          ]
+        },
+        {
+          "name": "Notting Hill",
+          "coordinates": { "lat": 51.5085, "lng": -0.2007 },
+          "averagePrice": 170,
+          "averageNights": 47,
+          "rating": 4.9,
+          "heroImage": "/nottinghill.jpg",
+          "yearData": [
+            {
+              "year": 2025,
+              "totalListings": 12000,
+              "averagePrice": 170,
+              "averageNights": 47,
+              "occupancyRate": 96.8,
+              "roomTypeDistribution": {
+                "Apartamento": 6000,
+                "Quarto": 3800,
+                "Casa": 1500,
+                "Estúdio": 700
+              },
+              "monthlyPrices": [142, 148, 152, 158, 164, 170, 175, 172, 168, 160, 154, 148],
+              "monthlyListings": [9800, 10050, 10300, 10550, 10800, 11000, 11200, 11350, 11450, 11550, 11800, 12000],
+              "topOwnersDistribution": {
+                "Luxahoston BTF": 150,
+                "City Rates": 100,
+                "Background": 80,
+                "Tolsis Hotel": 70,
+                "Lite": 60,
+                "JohnathanK": 20
+              }
+            },
+        
+            {
+              "year": 2024,
+              "totalListings": 11000,
+              "averagePrice": 160,
+              "averageNights": 45,
+              "occupancyRate": 94.7,
+              "roomTypeDistribution": {
+                "Apartamento": 5500,
+                "Quarto": 3500,
+                "Casa": 1300,
+                "Estúdio": 700
+              },
+              "monthlyPrices": [134, 140, 145, 150, 155, 160, 165, 162, 158, 152, 146, 140],
+              "monthlyListings": [9000, 9250, 9500, 9750, 10000, 10200, 10400, 10550, 10650, 10750, 10850, 11000],
+              "topOwnersDistribution": {
+                "Luxahoston BTF": 130,
+                "City Rates": 90,
+                "Background": 70,
+                "Tolsis Hotel": 60,
+                "Lite": 50,
+                "JohnathanK": 15
+              }
+            },
+            {
+              "year": 2023,
+              "totalListings": 10200,
+              "averagePrice": 152,
+              "averageNights": 43,
+              "occupancyRate": 92.5,
+              "roomTypeDistribution": {
+                "Apartamento": 5100,
+                "Quarto": 3300,
+                "Casa": 1200,
+                "Estúdio": 600
+              },
+              "monthlyPrices": [126, 132, 136, 142, 146, 152, 156, 154, 150, 144, 138, 132],
+              "monthlyListings": [8300, 8550, 8800, 9050, 9300, 9500, 9700, 9850, 9950, 10050, 10150, 10200],
+              "topOwnersDistribution": {
+                "Luxahoston BTF": 110,
+                "City Rates": 80,
+                "Background": 60,
+                "Tolsis Hotel": 50,
+                "Lite": 40,
+                "JohnathanK": 10
+              }
+            }
+          ]
+        },
+        {
+          "name": "Camden",
+          "coordinates": { "lat": 51.5391, "lng": -0.1428 },
+          "averagePrice": 150,
+          "averageNights": 42,
+          "rating": 4.5,
+          "heroImage": "/camden.webp",
+          "yearData": [
+            {
+              "year": 2025,
+              "totalListings": 10500,
+              "averagePrice": 150,
+              "averageNights": 42,
+              "occupancyRate": 94.0,
+              "roomTypeDistribution": {
+                "Apartamento": 5200,
+                "Quarto": 3300,
+                "Casa": 1200,
+                "Estúdio": 800
+              },
+              "monthlyPrices": [125, 130, 134, 138, 142, 150, 154, 152, 148, 142, 136, 130],
+              "monthlyListings": [8600, 8800, 9000, 9200, 9400, 9600, 9800, 9900, 10000, 10100, 10300, 10500],
+              "topOwnersDistribution": {
+                "Tolsis Hotel": 85,
+                "City Rates": 70,
+                "Lite": 55,
+                "Brin": 38,
+                "LIkter": 25,
+                "Background": 20
+              }
+            },
+            {
+              "year": 2024,
+              "totalListings": 9800,
+              "averagePrice": 140,
+              "averageNights": 40,
+              "occupancyRate": 92.0,
+              "roomTypeDistribution": {
+                "Apartamento": 4900,
+                "Quarto": 3100,
+                "Casa": 1100,
+                "Estúdio": 700
+              },
+              "monthlyPrices": [118, 122, 126, 130, 134, 140, 144, 142, 138, 132, 126, 122],
+              "monthlyListings": [8000, 8200, 8400, 8600, 8800, 9000, 9200, 9300, 9400, 9500, 9650, 9800],
+              "topOwnersDistribution": {
+                "Tolsis Hotel": 75,
+                "City Rates": 60,
+                "Lite": 50,
+                "Brin": 35,
+                "LIkter": 22,
+                "Background": 18
+              }
+            },
+            {
+              "year": 2023,
+              "totalListings": 9100,
+              "averagePrice": 132,
+              "averageNights": 38,
+              "occupancyRate": 90.5,
+              "roomTypeDistribution": {
+                "Apartamento": 4550,
+                "Quarto": 2900,
+                "Casa": 1000,
+                "Estúdio": 650
+              },
+              "monthlyPrices": [110, 114, 118, 122, 126, 132, 136, 134, 130, 124, 118, 114],
+              "monthlyListings": [7400, 7600, 7800, 8000, 8200, 8400, 8600, 8700, 8800, 8900, 9000, 9100],
+              "topOwnersDistribution": {
+                "Tolsis Hotel": 65,
+                "City Rates": 55,
+                "Lite": 45,
+                "Brin": 30,
+                "LIkter": 20,
+                "Background": 15
+              }
+            }
+          ]
+        },
+        {
+          "name": "Shoreditch",
+          "coordinates": { "lat": 51.5252, "lng": -0.0776 },
+          "averagePrice": 155,
+          "averageNights": 44,
+          "rating": 4.6,
+          "heroImage": "/shoreditch.jpg",
+          "yearData": [
+            {
+              "year": 2025,
+              "totalListings": 9900,
+              "averagePrice": 155,
+              "averageNights": 44,
+              "occupancyRate": 94.8,
+              "roomTypeDistribution": {
+                "Apartamento": 5000,
+                "Quarto": 3200,
+                "Casa": 1100,
+                "Estúdio": 600
+              },
+              "monthlyPrices": [130, 134, 138, 142, 148, 155, 160, 158, 152, 146, 140, 135],
+              "monthlyListings": [8200, 8400, 8600, 8800, 9000, 9200, 9400, 9500, 9600, 9700, 9800, 9900],
+              "topOwnersDistribution": {
+                "Luxahoston BTF": 120,
+                "City Rates": 80,
+                "Background": 60,
+                "Tolsis Hotel": 50,
+                "alice": 40,
+                "JohnathanK": 10
+              }
+            },
+            {
+              "year": 2024,
+              "totalListings": 9300,
+              "averagePrice": 146,
+              "averageNights": 42,
+              "occupancyRate": 92.7,
+              "roomTypeDistribution": {
+                "Apartamento": 4700,
+                "Quarto": 3000,
+                "Casa": 1000,
+                "Estúdio": 600
+              },
+              "monthlyPrices": [122, 126, 130, 134, 138, 146, 150, 148, 142, 136, 130, 126],
+              "monthlyListings": [7600, 7800, 8000, 8200, 8400, 8600, 8800, 8900, 9000, 9100, 9200, 9300],
+              "topOwnersDistribution": {
+                "Luxahoston BTF": 100,
+                "City Rates": 70,
+                "Background": 55,
+                "Tolsis Hotel": 45,
+                "alice": 35,
+                "JohnathanK": 8
+              }
+            },
+            {
+              "year": 2023,
+              "totalListings": 8700,
+              "averagePrice": 138,
+              "averageNights": 40,
+              "occupancyRate": 90.4,
+              "roomTypeDistribution": {
+                "Apartamento": 4350,
+                "Quarto": 2800,
+                "Casa": 900,
+                "Estúdio": 650
+              },
+              "monthlyPrices": [114, 118, 122, 126, 130, 138, 142, 140, 134, 128, 122, 118],
+              "monthlyListings": [7000, 7200, 7400, 7600, 7800, 8000, 8200, 8300, 8400, 8500, 8600, 8700],
+              "topOwnersDistribution": {
+                "Tolsis Hotel": 65,
+                "City Rates": 55,
+                "Lite": 45,
+                "Brin": 30,
+                "LIkter": 20,
+                "Background": 15
+              }
+            }
+          ]
+        }
+      ],
+      "listings": [
+        { "id": 1, "title": "Apartamento em Westminster", "type": "Apartamento", "region": "Westminster", "image": "/ApartamentoemWestminster.jpg", "city": "Londres" },
+        { "id": 2, "title": "Estúdio em Soho", "type": "Apartamento", "region": "Soho", "image": "/EstúdioemSoho.jpg", "city": "Londres" },
+        { "id": 3, "title": "Quarto em Kensington", "type": "Quarto", "region": "Kensington", "image": "/QuartoemKensington.jpg", "city": "Londres" },
+        { "id": 4, "title": "Casa em Notting Hill", "type": "Casa", "region": "Notting Hill", "image": "/CasaemNottingHill.jpg", "city": "Londres" },
+        { "id": 5, "title": "Apartamento em Camden", "type": "Apartamento", "region": "Camden", "image": "/ApartamentoemCamden.jpg", "city": "Londres" },
+        { "id": 6, "title": "Quarto em Shoreditch", "type": "Quarto", "region": "Shoreditch", "image": "/QuartoemShoreditch.webp", "city": "Londres" }
+      ],
+      "yearData": [
+        {
+          "year": 2025,
+          "totalListings": 96651,
+          "averagePrice": 157,
+          "averageNights": 45,
+          "occupancyRate": 97.4,
+          "topOwnersDistribution": {
+            "Luxahoston BTF": 485,
+            "Background": 420,
+            "Tolsis Hotel": 282,
+            "City Rates": 248,
+            "Lite": 219,
+            "Brin": 142
+          },
+          "monthlyPrices": [125, 132, 139, 145, 151, 157, 163, 159, 155, 149, 143, 138],
+          "monthlyListings": [82000, 84000, 86000, 88000, 90000, 92000, 94000, 95000, 96000, 96300, 96500, 96651],
+          "roomTypeDistribution": {
+            "Apartamento": 485,
+            "Quarto": 420,
+            "Casa": 282,
+            "Estúdio": 248
+          }
+        },
+        {
+          "year": 2024,
+          "totalListings": 92000,
+          "averagePrice": 142,
+          "averageNights": 41,
+          "occupancyRate": 95.2,
+          "topOwnersDistribution": {
+            "Luxahoston BTF": 460,
+            "Background": 395,
+            "Tolsis Hotel": 265,
+            "City Rates": 230,
+            "Lite": 205,
+            "Brin": 135
+          },
+          "monthlyPrices": [115, 122, 130, 138, 143, 148, 152, 148, 144, 139, 133, 142],
+          "monthlyListings": [78000, 80000, 82000, 84000, 86000, 88000, 90000, 91000, 91500, 92000, 92000, 92000],
+          "roomTypeDistribution": {
+            "Apartamento": 460,
+            "Quarto": 395,
+            "Casa": 265,
+            "Estúdio": 230
+          }
+        },
+        {
+          "year": 2023,
+          "totalListings": 85000,
+          "averagePrice": 128,
+          "averageNights": 38,
+          "occupancyRate": 92.8,
+          "roomTypeDistribution": {
+            "Apartamento": 425,
+            "Quarto": 365,
+            "Casa": 248,
+            "Estúdio": 215
+          },
+          "monthlyPrices": [105, 112, 120, 128, 135, 140, 145, 140, 135, 130, 125, 128],
+          "monthlyListings": [70000, 72000, 74000, 76000, 78000, 80000, 82000, 83000, 84000, 84500, 85000, 85000],
+          "topOwnersDistribution": {
+            "Luxahoston BTF": 100,
+            "Background": 99,
+            "Tolsis Hotel": 80,
+            "City Rates": 60,
+            "Lite": 20,
+            "Brin": 15
+          }
+        }
+      ]
+    },
+    "lisboa": {
+      "name": "Lisboa",
+      "country": "Portugal",
+      "averagePrice": 85,
+      "averageNights": 38,
+      "rating": 4.8,
+      "mapImage": "/maps/default.svg",
+      "heroImage": "/lisboa.jpg",
+      "coordinates": { "lat": 38.7223, "lng": -9.1393 },
+      "regions": [
+        {
+          "name": "Príncipe Real",
+          "coordinates": { "lat": 38.7161, "lng": -9.1399 },
+          "averagePrice": 92,
+          "averageNights": 37,
+          "rating": 4.7,
+          "heroImage": "/principereal.jpg",
+          "yearData": [
+            {
+              "year": 2025,
+              "totalListings": 8200,
+              "averagePrice": 92,
+              "averageNights": 37,
+              "occupancyRate": 94.2,
+              "roomTypeDistribution": {
+                "Apartamento": 4000,
+                "Quarto": 2800,
+                "Casa": 900,
+                "Estúdio": 500
+              },
+              "monthlyPrices": [78, 80, 82, 86, 88, 92, 95, 94, 90, 86, 82, 80],
+              "monthlyListings": [6600, 6750, 6900, 7050, 7200, 7350, 7500, 7600, 7700, 7850, 8050, 8200],
+              "topOwnersDistribution": {
+                "CasaLisboa": 150,
+                "StayInLisbon": 120,
+                "UrbanLiving": 90,
+                "LisbonHomes": 80,
+                "EasyStay": 60,
+                "CityNest": 40
+              }
+            },
+            {
+              "year": 2024,
+              "totalListings": 7600,
+              "averagePrice": 86,
+              "averageNights": 35,
+              "occupancyRate": 92.0,
+              "roomTypeDistribution": {
+                "Apartamento": 3700,
+                "Quarto": 2600,
+                "Casa": 850,
+                "Estúdio": 450
+              },
+              "monthlyPrices": [72, 74, 76, 80, 82, 86, 89, 88, 84, 80, 76, 74],
+              "monthlyListings": [6100, 6250, 6400, 6550, 6700, 6850, 7000, 7100, 7200, 7300, 7450, 7600],
+              "topOwnersDistribution": {
+                "CasaLisboa": 130,
+                "StayInLisbon": 110,
+                "UrbanLiving": 80,
+                "LisbonHomes": 70,
+                "EasyStay": 50,
+                "CityNest": 30
+              }
+            },
+            {
+              "year": 2023,
+              "totalListings": 7100,
+              "averagePrice": 80,
+              "averageNights": 33,
+              "occupancyRate": 90.5,
+              "roomTypeDistribution": {
+                "Apartamento": 3450,
+                "Quarto": 2450,
+                "Casa": 800,
+                "Estúdio": 400
+              },
+              "monthlyPrices": [68, 70, 72, 76, 78, 80, 83, 82, 78, 74, 72, 70],
+              "monthlyListings": [5600, 5750, 5900, 6050, 6200, 6350, 6500, 6600, 6700, 6800, 6950, 7100],
+              "topOwnersDistribution": {
+                "CasaLisboa": 110,
+                "StayInLisbon": 100,
+                "UrbanLiving": 70,
+                "LisbonHomes": 60,
+                "EasyStay": 40,
+                "CityNest": 25
+              }
+            }
+          ]
+        },
+        {
+          "name": "Alfama",
+          "coordinates": { "lat": 38.7108, "lng": -9.1295 },
+          "averagePrice": 90,
+          "averageNights": 39,
+          "rating": 4.6,
+          "heroImage": "/alfama.png",
+          "yearData": [
+            {
+              "year": 2025,
+              "totalListings": 7600,
+              "averagePrice": 90,
+              "averageNights": 39,
+              "occupancyRate": 93.5,
+              "roomTypeDistribution": {
+                "Apartamento": 3600,
+                "Quarto": 2600,
+                "Casa": 800,
+                "Estúdio": 600
+              },
+              "monthlyPrices": [76, 78, 80, 84, 86, 90, 94, 92, 88, 84, 80, 78],
+              "monthlyListings": [6150, 6300, 6450, 6600, 6750, 6900, 7050, 7150, 7250, 7350, 7500, 7600],
+              "topOwnersDistribution": {
+                "CasaLisboa": 80,
+                "StayInLisbon": 70,
+                "UrbanLiving": 60,
+                "LisbonHomes": 45,
+                "EasyStay": 30,
+                "CityNest": 10
+              }
+            },
+            {
+              "year": 2024,
+              "totalListings": 7100,
+              "averagePrice": 85,
+              "averageNights": 37,
+              "occupancyRate": 91.4,
+              "roomTypeDistribution": {
+                "Apartamento": 3350,
+                "Quarto": 2450,
+                "Casa": 750,
+                "Estúdio": 550
+              },
+              "monthlyPrices": [72, 74, 76, 80, 82, 85, 88, 87, 83, 79, 76, 74],
+              "monthlyListings": [5700, 5850, 6000, 6150, 6300, 6450, 6600, 6700, 6800, 6900, 7000, 7100],
+              "topOwnersDistribution": {
+                "CasaLisboa": 70,
+                "StayInLisbon": 60,
+                "UrbanLiving": 50,
+                "LisbonHomes": 40,
+                "EasyStay": 25,
+                "CityNest": 8
+              }
+            },
+            {
+              "year": 2023,
+              "totalListings": 6600,
+              "averagePrice": 80,
+              "averageNights": 35,
+              "occupancyRate": 89.6,
+              "roomTypeDistribution": {
+                "Apartamento": 3100,
+                "Quarto": 2300,
+                "Casa": 700,
+                "Estúdio": 500
+              },
+              "monthlyPrices": [68, 70, 72, 76, 78, 80, 83, 82, 78, 74, 72, 70],
+              "monthlyListings": [5250, 5400, 5550, 5700, 5850, 6000, 6150, 6250, 6350, 6450, 6550, 6600],
+              "topOwnersDistribution": {
+                "CasaLisboa": 60,
+                "StayInLisbon": 50,
+                "UrbanLiving": 40,
+                "LisbonHomes": 35,
+                "EasyStay": 20,
+                "CityNest": 5
+              }
+            }
+          ]
+        },
+        {
+          "name": "Chiado",
+          "coordinates": { "lat": 38.7139, "lng": -9.1416 },
+          "averagePrice": 94,
+          "averageNights": 36,
+          "rating": 4.7,
+          "heroImage": "/chiado.jpg",
+          "yearData": [
+            {
+              "year": 2025,
+              "totalListings": 7000,
+              "averagePrice": 94,
+              "averageNights": 36,
+              "occupancyRate": 92.8,
+              "roomTypeDistribution": {
+                "Apartamento": 3400,
+                "Quarto": 2300,
+                "Casa": 800,
+                "Estúdio": 500
+              },
+              "monthlyPrices": [80, 82, 84, 88, 90, 94, 96, 95, 92, 88, 84, 82],
+              "monthlyListings": [5600, 5750, 5900, 6050, 6200, 6350, 6450, 6550, 6650, 6750, 6900, 7000],
+              "topOwnersDistribution": {
+                "CasaLisboa": 60,
+                "StayInLisbon": 50,
+                "UrbanLiving": 40,
+                "LisbonHomes": 30,
+                "EasyStay": 20,
+                "CityNest": 5
+              }
+            },
+            {
+              "year": 2024,
+              "totalListings": 6500,
+              "averagePrice": 88,
+              "averageNights": 34,
+              "occupancyRate": 90.6,
+              "roomTypeDistribution": {
+                "Apartamento": 3200,
+                "Quarto": 2150,
+                "Casa": 750,
+                "Estúdio": 400
+              },
+              "monthlyPrices": [75, 78, 80, 84, 86, 88, 92, 90, 86, 82, 80, 78],
+              "monthlyListings": [5150, 5300, 5450, 5600, 5750, 5900, 6000, 6100, 6200, 6300, 6400, 6500],
+              "topOwnersDistribution": {
+                "CasaLisboa": 50,
+                "StayInLisbon": 40,
+                "UrbanLiving": 35,
+                "LisbonHomes": 25,
+                "EasyStay": 15,
+                "CityNest": 4
+              }
+            },
+            {
+              "year": 2023,
+              "totalListings": 6000,
+              "averagePrice": 82,
+              "averageNights": 32,
+              "occupancyRate": 88.9,
+              "roomTypeDistribution": {
+                "Apartamento": 2950,
+                "Quarto": 2000,
+                "Casa": 700,
+                "Estúdio": 350
+              },
+              "monthlyPrices": [70, 72, 74, 78, 80, 82, 86, 84, 80, 76, 74, 72],
+              "monthlyListings": [4700, 4850, 5000, 5150, 5300, 5450, 5550, 5650, 5750, 5850, 5950, 6000],
+              "topOwnersDistribution": {
+                "CasaLisboa": 40,
+                "StayInLisbon": 35,
+                "UrbanLiving": 30,
+                "LisbonHomes": 20,
+                "EasyStay": 10,
+                "CityNest": 3
+              }
+            }
+          ]
+        }
+      ],
+      "listings": [
+        { "id": 7, "title": "Apartamento em Príncipe Real", "type": "Apartamento", "region": "Príncipe Real", "image": "/ApartamentoPrincipeReal.jpg", "city": "Lisboa" },
+        { "id": 8, "title": "Quarto em Alfama", "type": "Quarto", "region": "Alfama", "image": "/QuartoAlfama.jpg", "city": "Lisboa" },
+        { "id": 9, "title": "Casa no Chiado", "type": "Casa", "region": "Chiado", "image": "/CasaChiado.jpg", "city": "Lisboa" }
+      ],
+      "yearData": [
+        {
+          "year": 2025,
+          "totalListings": 48500,
+          "averagePrice": 85,
+          "averageNights": 38,
+          "occupancyRate": 94.5,
+          "roomTypeDistribution": {
+            "Apartamento": 24250,
+            "Quarto": 18200,
+            "Casa": 4800,
+            "Estúdio": 1250
+          },
+          "monthlyPrices": [70, 75, 78, 82, 85, 90, 95, 92, 88, 84, 80, 85],
+          "monthlyListings": [40000, 41000, 42000, 43000, 44000, 45000, 46000, 47000, 47500, 48000, 48200, 48500],
+          "topOwnersDistribution": {
+            "CasaLisboa": 340,
+            "StayInLisbon": 280,
+            "UrbanLiving": 220,
+            "LisbonHomes": 180,
+            "EasyStay": 120,
+            "CityNest": 80
+          }
+        },
+        {
+          "year": 2024,
+          "totalListings": 45000,
+          "averagePrice": 75,
+          "averageNights": 35,
+          "occupancyRate": 91.2,
+          "roomTypeDistribution": {
+            "Apartamento": 22500,
+            "Quarto": 17000,
+            "Casa": 4500,
+            "Estúdio": 1000
+          },
+          "monthlyPrices": [62, 68, 72, 75, 78, 82, 86, 83, 79, 75, 72, 75],
+          "monthlyListings": [35000, 36000, 37000, 38000, 39000, 40000, 41000, 42000, 43000, 44000, 44500, 45000],
+          "topOwnersDistribution": {
+            "CasaLisboa": 300,
+            "StayInLisbon": 250,
+            "UrbanLiving": 200,
+            "LisbonHomes": 150,
+            "EasyStay": 100,
+            "CityNest": 60
+          }
+        },
+        {
+          "year": 2023,
+          "totalListings": 40000,
+          "averagePrice": 68,
+          "averageNights": 32,
+          "occupancyRate": 88.5,
+          "roomTypeDistribution": {
+            "Apartamento": 20000,
+            "Quarto": 15000,
+            "Casa": 4000,
+            "Estúdio": 1000
+          },
+          "monthlyPrices": [55, 60, 65, 68, 72, 76, 80, 77, 73, 69, 65, 68],
+          "monthlyListings": [28000, 30000, 32000, 34000, 36000, 37000, 38000, 39000, 39500, 40000, 40000, 40000],
+          "topOwnersDistribution": {
+            "CasaLisboa": 250,
+            "StayInLisbon": 200,
+            "UrbanLiving": 150,
+            "LisbonHomes": 120,
+            "EasyStay": 80,
+            "CityNest": 50
+          }
+        }
+      ]
+    },
+    "porto": {
+      "name": "Porto",
+      "country": "Portugal",
+      "averagePrice": 75,
+      "averageNights": 32,
+      "rating": 4.7,
+      "mapImage": "/maps/default.svg",
+      "heroImage": "/porto.jpg",
+      "coordinates": { "lat": 41.1579, "lng": -8.6291 },
+      "regions": [
+        {
+          "name": "Miragaia",
+          "coordinates": { "lat": 41.1458, "lng": -8.6193 },
+          "averagePrice": 78,
+          "averageNights": 31,
+          "rating": 4.6,
+          "heroImage": "/miragaia.jpg",
+          "yearData": [
+            {
+              "year": 2025,
+              "totalListings": 5200,
+              "averagePrice": 78,
+              "averageNights": 31,
+              "occupancyRate": 92.8,
+              "roomTypeDistribution": {
+                "Apartamento": 2600,
+                "Quarto": 1850,
+                "Casa": 500,
+                "Estúdio": 250
+              },
+              "monthlyPrices": [64, 68, 70, 72, 74, 78, 82, 80, 76, 72, 68, 66],
+              "monthlyListings": [4100, 4200, 4300, 4400, 4500, 4600, 4700, 4800, 4900, 5000, 5100, 5200],
+              "topOwnersDistribution": {
+                "PPortoHousing": 100,
+                "City Porto": 80,
+                "Alice Sousa House": 70,
+                "Porting": 50,
+                "FCP": 60,
+                "PEDRO": 30
+              }
+            },
+            {
+              "year": 2024,
+              "totalListings": 4800,
+              "averagePrice": 72,
+              "averageNights": 29,
+              "occupancyRate": 90.4,
+              "roomTypeDistribution": {
+                "Apartamento": 2400,
+                "Quarto": 1700,
+                "Casa": 450,
+                "Estúdio": 250
+              },
+              "monthlyPrices": [60, 64, 66, 68, 70, 72, 76, 74, 70, 66, 64, 62],
+              "monthlyListings": [3700, 3800, 3900, 4000, 4100, 4200, 4300, 4400, 4500, 4600, 4700, 4800],
+              "topOwnersDistribution": {
+                "PPortoHousing": 250,
+                "City Porto": 220,
+                "Alice Sousa House": 180,
+                "Porting": 90,
+                "FCP": 70,
+                "PEDRO": 40
+              }
+            },
+            {
+              "year": 2023,
+              "totalListings": 4400,
+              "averagePrice": 66,
+              "averageNights": 27,
+              "occupancyRate": 88.1,
+              "roomTypeDistribution": {
+                "Apartamento": 2200,
+                "Quarto": 1550,
+                "Casa": 400,
+                "Estúdio": 250
+              },
+              "monthlyPrices": [56, 60, 62, 64, 66, 66, 70, 68, 64, 62, 60, 58],
+              "monthlyListings": [3300, 3400, 3500, 3600, 3700, 3800, 3900, 4000, 4100, 4200, 4300, 4400],
+              "topOwnersDistribution": {
+                "PPortoHousing": 100,
+                "City Porto": 80,
+                "Alice Sousa House": 50,
+                "JOSE PEREIRA": 15,
+                "FCP": 12,
+                "PEDRO": 10
+              }
+            }
+          ]
+        },
+        {
+          "name": "Ribeira",
+          "coordinates": { "lat": 41.1426, "lng": -8.6126 },
+          "averagePrice": 82,
+          "averageNights": 33,
+          "rating": 4.7,
+          "heroImage": "/ribeira.jpg", 
+          "yearData": [
+            {
+              "year": 2025,
+              "totalListings": 4800,
+              "averagePrice": 82,
+              "averageNights": 33,
+              "occupancyRate": 93.5,
+              "roomTypeDistribution": {
+                "Apartamento": 2400,
+                "Quarto": 1700,
+                "Casa": 500,
+                "Estúdio": 200
+              },
+              "monthlyPrices": [68, 70, 72, 76, 78, 82, 86, 84, 80, 76, 72, 70],
+              "monthlyListings": [3800, 3925, 4050, 4175, 4300, 4425, 4500, 4550, 4600, 4650, 4725, 4800],
+              "topOwnersDistribution": {
+                "PPortoHousing": 100,
+                "City Porto": 80,
+                "Alice Sousa House": 70,
+                "Porting": 50,
+                "FCP": 40,
+                "nunoribeiro": 30
+              }
+            },
+            {
+              "year": 2024,
+              "totalListings": 4500,
+              "averagePrice": 76,
+              "averageNights": 31,
+              "occupancyRate": 91.2,
+              "roomTypeDistribution": {
+                "Apartamento": 2250,
+                "Quarto": 1600,
+                "Casa": 450,
+                "Estúdio": 200
+              },
+              "monthlyPrices": [64, 66, 68, 72, 74, 76, 80, 78, 74, 70, 68, 66],
+              "monthlyListings": [3500, 3625, 3750, 3875, 4000, 4125, 4200, 4250, 4300, 4350, 4425, 4500],
+              "topOwnersDistribution": {
+                "PPortoHousing": 90,
+                "Alberta": 70,
+                "Alice Sousa House": 60,
+                "Porting": 40,
+                "FCP": 30,
+                "nunoribeiro": 20
+              }
+            },
+            {
+              "year": 2023,
+              "totalListings": 4200,
+              "averagePrice": 70,
+              "averageNights": 29,
+              "occupancyRate": 89.0,
+              "roomTypeDistribution": {
+                "Apartamento": 2100,
+                "Quarto": 1500,
+                "Casa": 400,
+                "Estúdio": 200
+              },
+              "monthlyPrices": [60, 62, 64, 68, 70, 70, 74, 72, 68, 64, 62, 60],
+              "monthlyListings": [3200, 3325, 3450, 3575, 3700, 3825, 3900, 3950, 4000, 4050, 4125, 4200],
+              "topOwnersDistribution": {
+                "PPortoHousing": 80,
+                "City Porto": 60,
+                "filipenung": 40,
+                "JOSE PEREIRA": 12,
+                "FCP": 10,
+                "nunoribeiro": 8
+            }
+          }
+          ]
+        }
+      ],
+      "listings": [
+        { "id": 10, "title": "Apartamento em Miragaia", "type": "Apartamento", "region": "Miragaia", "image": "/ApartamentoMiragaia.jpg", "city": "Porto" },
+        { "id": 11, "title": "Quarto na Ribeira", "type": "Quarto", "region": "Ribeira", "image": "/QuartoRibeira.jpg", "city": "Porto" }
+      ],
+      "yearData": [
+        {
+          "year": 2025,
+          "totalListings": 28500,
+          "averagePrice": 75,
+          "averageNights": 32,
+          "occupancyRate": 92.3,
+          "roomTypeDistribution": {
+            "Apartamento": 14250,
+            "Quarto": 10700,
+            "Casa": 2800,
+            "Estúdio": 750
+          },
+          "monthlyPrices": [62, 68, 71, 74, 76, 80, 85, 82, 78, 74, 70, 75],
+          "monthlyListings": [22000, 23000, 24000, 25000, 26000, 27000, 27500, 28000, 28200, 28300, 28400, 28500],
+          "topOwnersDistribution": {
+            "PPortoHousing": 350,
+            "City ": 280,
+            "Alice Sousa House": 220,
+            "Porting": 150,
+            "FCP": 120,
+            "PEDRO": 80
+          }
+        },
+        {
+          "year": 2024,
+          "totalListings": 26000,
+          "averagePrice": 68,
+          "averageNights": 29,
+          "occupancyRate": 89.5,
+          "roomTypeDistribution": {
+            "Apartamento": 13000,
+            "Quarto": 9800,
+            "Casa": 2600,
+            "Estúdio": 600
+          },
+          "monthlyPrices": [55, 62, 65, 68, 70, 75, 80, 77, 73, 69, 65, 68],
+          "monthlyListings": [18000, 19000, 20000, 21000, 22000, 23000, 24000, 24500, 25000, 25500, 25700, 26000],
+          "topOwnersDistribution": {
+            "PPortoHousing": 300,
+            "City Porto": 240,
+            "Alice Sousa House": 180,
+            "Porting": 120,
+            "FCP": 90,
+            "PEDRO": 50
+          }
+        },
+        {
+          "year": 2023,
+          "totalListings": 23500,
+          "averagePrice": 62,
+          "averageNights": 26,
+          "occupancyRate": 86.2,
+          "roomTypeDistribution": {
+            "Apartamento": 11750,
+            "Quarto": 8800,
+            "Casa": 2350,
+            "Estúdio": 600
+          },
+          "monthlyPrices": [48, 55, 58, 62, 65, 70, 75, 72, 68, 64, 60, 62],
+          "monthlyListings": [15000, 16000, 17000, 18000, 19000, 20000, 21000, 22000, 22500, 23000, 23300, 23500],
+          "topOwnersDistribution": {
+            "PPortoHousing": 250,
+            "City Porto": 200,
+            "Alice Sousa House": 150,
+            "JOSE PEREIRA": 70,
+            "FCP": 50,
+            "PEDRO": 30
+          }
+        }
+      ]
+    },
+    "paris": {
+      "name": "Paris",
+      "country": "França",
+      "averagePrice": 142,
+      "averageNights": 41,
+      "rating": 4.6,
+      "heroImage": "/paris.jpg",
+      "mapImage": "/maps/default.svg",
+      "coordinates": { "lat": 48.8566, "lng": 2.3522 },
+      "regions": [
+        {
+          "name": "Marais",
+          "coordinates": { "lat": 48.8597, "lng": 2.3643 },
+          "averagePrice": 150,
+          "averageNights": 42,
+          "rating": 4.8,
+          "heroImage": "/marais.jpg",
+          "yearData": [
+            {
+              "year": 2025,
+              "totalListings": 11800,
+              "averagePrice": 150,
+              "averageNights": 42,
+              "occupancyRate": 96.8,
+              "roomTypeDistribution": {
+                "Apartamento": 6000,
+                "Quarto": 3800,
+                "Casa": 1400,
+                "Estúdio": 600
+              },
+              "monthlyPrices": [124, 132, 138, 144, 150, 156, 164, 162, 156, 150, 142, 134],
+              "monthlyListings": [9400, 9600, 9800, 10000, 10200, 10400, 10800, 11000, 11200, 11400, 11600, 11800],
+              "topOwnersDistribution": {
+                "ParisStay": 200,
+                "EliteHomes": 180,
+                "CityLodgings": 150,
+                "UrbanRetreats": 100,
+                "LuxuryStays": 80,
+                "ChicAbodes": 50
+              }
+            },
+            {
+              "year": 2024,
+              "totalListings": 11000,
+              "averagePrice": 140,
+              "averageNights": 40,
+              "occupancyRate": 94.5,
+              "roomTypeDistribution": {
+                "Apartamento": 5600,
+                "Quarto": 3500,
+                "Casa": 1300,
+                "Estúdio": 600
+              },
+              "monthlyPrices": [116, 124, 130, 136, 140, 146, 152, 150, 144, 138, 130, 126],
+              "monthlyListings": [8700, 8900, 9100, 9300, 9500, 9700, 9900, 10100, 10300, 10500, 10700, 11000],
+              "topOwnersDistribution": {
+                "ParisStay": 180,
+                "EliteHomes": 160,
+                "CityLodgings": 130,
+                "UrbanRetreats": 90,
+                "LuxuryStays": 70,
+                "ChicAbodes": 40
+              }
+            },
+            {
+              "year": 2023,
+              "totalListings": 10200,
+              "averagePrice": 132,
+              "averageNights": 38,
+              "occupancyRate": 92.2,
+              "roomTypeDistribution": {
+                "Apartamento": 5200,
+                "Quarto": 3300,
+                "Casa": 1100,
+                "Estúdio": 600
+              },
+              "monthlyPrices": [108, 114, 122, 128, 132, 138, 144, 142, 136, 130, 124, 118],
+              "monthlyListings": [8000, 8200, 8400, 8600, 8800, 9000, 9200, 9400, 9600, 9800, 10000, 10200],
+              "topOwnersDistribution": {
+                "ParisStay": 160,
+                "EliteHomes": 140,
+                "CityLodgings": 120,
+                "UrbanRetreats": 80,
+                "LuxuryStays": 60,
+                "ChicAbodes": 30
+              }
+            }
+          ]
+        },
+        {
+          "name": "Montmartre",
+          "coordinates": { "lat": 48.8867, "lng": 2.3431 },
+          "averagePrice": 138,
+          "averageNights": 40,
+          "rating": 4.7,
+          "heroImage": "/montmartre.jpg",
+          "yearData": [
+            {
+              "year": 2025,
+              "totalListings": 10500,
+              "averagePrice": 138,
+              "averageNights": 40,
+              "occupancyRate": 95.5,
+              "roomTypeDistribution": {
+                "Apartamento": 5200,
+                "Quarto": 3500,
+                "Casa": 1100,
+                "Estúdio": 700
+              },
+              "monthlyPrices": [116, 122, 128, 134, 138, 142, 148, 146, 140, 134, 128, 122],
+              "monthlyListings": [8400, 8600, 8800, 9000, 9200, 9400, 9600, 9700, 9800, 9900, 10200, 10500],
+              "topOwnersDistribution": {
+                "ParisStay": 150,
+                "Freud": 130,
+                "CityLodgings": 110,
+                "UrbanRetreats": 80,
+                "LuxuryStays": 70,
+                "TOMENA": 40
+              }
+            },
+            {
+              "year": 2024,
+              "totalListings": 9800,
+              "averagePrice": 130,
+              "averageNights": 38,
+              "occupancyRate": 93.0,
+              "roomTypeDistribution": {
+                "Apartamento": 4900,
+                "Quarto": 3300,
+                "Casa": 1000,
+                "Estúdio": 600
+              },
+              "monthlyPrices": [110, 116, 122, 128, 130, 134, 140, 138, 132, 126, 120, 116],
+              "monthlyListings": [7800, 8000, 8200, 8400, 8600, 8800, 9000, 9100, 9200, 9300, 9550, 9800],
+              "topOwnersDistribution": {
+                "ParisStay": 130,
+                "Freud": 110,
+                "CityLodgings": 90,
+                "UrbanRetreats": 70,
+                "LuxuryStays": 60,
+                "TOMENA": 30
+              }
+            },
+            {
+              "year": 2023,
+              "totalListings": 9200,
+              "averagePrice": 122,
+              "averageNights": 36,
+              "occupancyRate": 90.8,
+              "roomTypeDistribution": {
+                "Apartamento": 4600,
+                "Quarto": 3100,
+                "Casa": 900,
+                "Estúdio": 600
+              },
+              "monthlyPrices": [102, 108, 114, 120, 124, 128, 134, 132, 126, 120, 114, 110],
+              "monthlyListings": [7200, 7400, 7600, 7800, 8000, 8200, 8400, 8500, 8600, 8700, 8900, 9200],
+              "topOwnersDistribution": {
+                "ParisStay": 110,
+                "Freud": 90,
+                "CityLodgings": 80,
+                "UrbanRetreats": 60,
+                "LuxuryStays": 50,
+                "TOMENA": 20
+              }
+            }
+          ]
+        },
+        {
+          "name": "6º Arrondissement",
+          "coordinates": { "lat": 48.8489, "lng": 2.3381 },
+          "averagePrice": 145,
+          "averageNights": 41,
+          "rating": 4.7,
+          "heroImage": "/6th-Arrondissement.webp",
+          "yearData": [
+            {
+              "year": 2025,
+              "totalListings": 9800,
+              "averagePrice": 145,
+              "averageNights": 41,
+              "occupancyRate": 95.0,
+              "roomTypeDistribution": {
+                "Apartamento": 4900,
+                "Quarto": 3300,
+                "Casa": 1100,
+                "Estúdio": 500
+              },
+              "monthlyPrices": [120, 126, 132, 138, 144, 148, 152, 150, 144, 138, 132, 126],
+              "monthlyListings": [8000, 8200, 8400, 8600, 8800, 9000, 9200, 9300, 9400, 9500, 9650, 9800],
+              "topOwnersDistribution": {
+                "ParisStay": 140,
+                "Freud": 120,
+                "CityLodgings": 100,
+                "CharlotteChapel": 70,
+                "LuxuryStays": 60,
+                "CIVUPLE": 30
+              }
+            },
+            {
+              "year": 2024,
+              "totalListings": 9200,
+              "averagePrice": 136,
+              "averageNights": 39,
+              "occupancyRate": 92.8,
+              "roomTypeDistribution": {
+                "Apartamento": 4600,
+                "Quarto": 3100,
+                "Casa": 1000,
+                "Estúdio": 500
+              },
+              "monthlyPrices": [112, 118, 124, 130, 134, 138, 142, 140, 134, 128, 122, 118],
+              "monthlyListings": [7500, 7700, 7900, 8100, 8300, 8500, 8700, 8800, 8900, 9000, 9100, 9200],
+              "topOwnersDistribution": {
+                "ParisStay": 120,
+                "Freud": 100,
+                "CityLodgings": 80,
+                "CharlotteChapel": 60,
+                "LuxuryStays": 50,
+                "CIVUPLE": 20
+              }
+            },
+            {
+              "year": 2023,
+              "totalListings": 8600,
+              "averagePrice": 128,
+              "averageNights": 37,
+              "occupancyRate": 90.4,
+              "roomTypeDistribution": {
+                "Apartamento": 4300,
+                "Quarto": 2900,
+                "Casa": 900,
+                "Estúdio": 500
+              },
+              "monthlyPrices": [104, 110, 116, 122, 126, 130, 134, 132, 126, 120, 114, 110],
+              "monthlyListings": [7000, 7200, 7400, 7600, 7800, 8000, 8200, 8300, 8400, 8500, 8550, 8600],
+              "topOwnersDistribution": {
+                "ParisStay": 100,
+                "Freud": 80,
+                "CityLodgings": 70,
+                "CharlotteChapel": 50,
+                "LuxuryStays": 40,
+                "CIVUPLE": 15
+              }
+            }
+          ]
+        },
+        {
+          "name": "Belleville",
+          "coordinates": { "lat": 48.8726, "lng": 2.3909 },
+          "averagePrice": 128,
+          "averageNights": 39,
+          "rating": 4.5,
+          "heroImage": "/belleville.jpg", 
+          "yearData": [
+            {
+              "year": 2025,
+              "totalListings": 9200,
+              "averagePrice": 128,
+              "averageNights": 39,
+              "occupancyRate": 93.8,
+              "roomTypeDistribution": {
+                "Apartamento": 4600,
+                "Quarto": 3100,
+                "Casa": 800,
+                "Estúdio": 700
+              },
+              "monthlyPrices": [106, 110, 114, 120, 124, 128, 132, 130, 124, 118, 112, 108],
+              "monthlyListings": [7400, 7600, 7800, 8000, 8200, 8400, 8600, 8700, 8800, 8900, 9050, 9200],
+              "topOwnersDistribution": {
+                "ParisStay": 130,
+                "Freud": 110,
+                "Mathilde": 90,
+                "CharlotteChapel": 70,
+                "LuxuryStays": 50,
+                "Jules Gabriel": 25
+              }
+            },
+            {
+              "year": 2024,
+              "totalListings": 8700,
+              "averagePrice": 120,
+              "averageNights": 37,
+              "occupancyRate": 91.5,
+              "roomTypeDistribution": {
+                "Apartamento": 4350,
+                "Quarto": 2900,
+                "Casa": 750,
+                "Estúdio": 700
+              },
+              "monthlyPrices": [98, 104, 108, 114, 118, 120, 124, 122, 116, 110, 106, 102],
+              "monthlyListings": [6900, 7100, 7300, 7500, 7700, 7900, 8100, 8200, 8300, 8400, 8550, 8700],
+              "topOwnersDistribution": {
+                "ParisStay": 110,
+                "Freud": 90,
+                "Mathilde": 70,
+                "CharlotteChapel": 50,
+                "LuxuryStays": 40,
+                "Jules Gabriel": 20
+              }
+            },
+            {
+              "year": 2023,
+              "totalListings": 8200,
+              "averagePrice": 112,
+              "averageNights": 35,
+              "occupancyRate": 89.0,
+              "roomTypeDistribution": {
+                "Apartamento": 4100,
+                "Quarto": 2700,
+                "Casa": 700,
+                "Estúdio": 700
+              },
+              "monthlyPrices": [90, 96, 100, 106, 110, 112, 116, 114, 108, 102, 98, 94],
+              "monthlyListings": [6400, 6600, 6800, 7000, 7200, 7400, 7600, 7700, 7800, 7900, 8050, 8200],
+              "topOwnersDistribution": {
+                "ParisStay": 90,
+                "Freud": 70,
+                "Mathilde": 60,
+                "CharlotteChapel": 40,
+                "LuxuryStays": 30,
+                "Jules Gabriel": 15
+            }
+          }
+          ]
+        }
+      ],
+      "listings": [
+        { "id": 12, "title": "Apartamento em Marais", "type": "Apartamento", "region": "Marais", "image": "/ApartamentoMarais.jpg", "city": "Paris" },
+        { "id": 13, "title": "Estúdio em Montmartre", "type": "Apartamento", "region": "Montmartre", "image": "/EstudioMontmartre.jpg", "city": "Paris" },
+        { "id": 14, "title": "Quarto no 6º Arrondissement", "type": "Quarto", "region": "6º Arrondissement", "image": "/Quarto6Arrondissement.jpg", "city": "Paris" },
+        { "id": 15, "title": "Casa em Belleville", "type": "Casa", "region": "Belleville", "image": "/CasaBelleville.jpg", "city": "Paris" }
+      ],
+      "yearData": [
+        {
+          "year": 2025,
+          "totalListings": 68000,
+          "averagePrice": 142,
+          "averageNights": 41,
+          "occupancyRate": 95.8,
+          "roomTypeDistribution": {
+            "Apartamento": 34000,
+            "Quarto": 25600,
+            "Casa": 6800,
+            "Estúdio": 1600
+          },
+          "monthlyPrices": [115, 125, 135, 142, 148, 155, 160, 155, 150, 143, 135, 142],
+          "monthlyListings": [55000, 57000, 59000, 61000, 63000, 65000, 66000, 67000, 67500, 68000, 68000, 68000],
+          "topOwnersDistribution": {
+            "NHhotel": 400,
+            "FRANCESTAYING": 320,
+            "Mathilde": 250,
+            "CharlotteChapel": 180,
+            "LuxuryStays": 150,
+            "Gabriel": 100
+          }
+        },
+        {
+          "year": 2024,
+          "totalListings": 64000,
+          "averagePrice": 132,
+          "averageNights": 38,
+          "occupancyRate": 93.5,
+          "roomTypeDistribution": {
+            "Apartamento": 32000,
+            "Quarto": 24000,
+            "Casa": 6400,
+            "Estúdio": 1600
+          },
+          "monthlyPrices": [108, 118, 128, 135, 141, 150, 155, 150, 142, 133, 125, 132],
+          "monthlyListings": [45000, 47000, 49000, 51000, 53000, 55000, 58000, 60000, 61000, 62000, 63000, 64000],
+          "topOwnersDistribution": {
+            "NHhotel": 350,
+            "FRANCESTAYING": 280,
+            "Mathilde": 220,
+            "CharlotteChapel": 150,
+            "LuxuryStays": 120,
+            "Gabriel": 80
+          }
+        },
+        {
+          "year": 2023,
+          "totalListings": 58000,
+          "averagePrice": 120,
+          "averageNights": 35,
+          "occupancyRate": 91.2,
+          "roomTypeDistribution": {
+            "Apartamento": 29000,
+            "Quarto": 22000,
+            "Casa": 5800,
+            "Estúdio": 1200
+          },
+          "monthlyPrices": [98, 108, 118, 125, 132, 142, 150, 145, 138, 128, 118, 120],
+          "monthlyListings": [35000, 37000, 39000, 41000, 43000, 45000, 48000, 50000, 52000, 54000, 56000, 58000],
+          "topOwnersDistribution": {
+            "NHhotel": 300,
+            "FRANCESTAYING": 240,
+            "Mathilde": 200,
+            "CharlotteChapel": 120,
+            "LuxuryStays": 100,
+            "Gabriel": 60
+          }
+        }
+      ]
+    }
+  }
+}

@@ -10,11 +10,14 @@
 #define _USE_MATH_DEFINES
 #include <math.h>
 
+
+// usar o M_PI!
+
 float alfa = 0.0f, beta = 0.0f, radius = 5.0f;
 float camX, camY, camZ;
 
 
-void spherical2Cartesian() {
+void spherical2Cartesian() { // convert spherical coordinates to Cartesian for gluLookAt
 
 	camX = radius * cos(beta) * sin(alfa);
 	camY = radius * sin(beta);
@@ -149,6 +152,8 @@ void renderScene(void) {
 		0.0, 0.0, 0.0,
 		0.0f, 1.0f, 0.0f);
 
+	// set color for the cylinder
+	glColor3f(0.0f, 1.0f, 0.0f);
 	cylinder(1,2,10);
 
 	// End of frame
@@ -225,6 +230,7 @@ int main(int argc, char **argv) {
 // Callback registration for keyboard processing
 	glutKeyboardFunc(processKeys);
 	glutSpecialFunc(processSpecialKeys);
+	glutIdleFunc(glutPostRedisplay);
 
 	// init GLEW
 #ifndef __APPLE__
@@ -236,7 +242,10 @@ int main(int argc, char **argv) {
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_CULL_FACE);
 	glPolygonMode(GL_FRONT, GL_LINE);
+	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
+	// initialize camera and projection
+	changeSize(800, 800);
 	spherical2Cartesian();
 
 	printInfo();

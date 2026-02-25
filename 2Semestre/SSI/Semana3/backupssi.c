@@ -57,4 +57,10 @@ diretorias protegidas (neste caso, /root)
   cria um ambiente de teste para demonstrar a exploração da vulnerabilidade. Ambos os programas devem ser compilados e executados 
   com setuid root para funcionar corretamente.
 
+4.  Implemente uma correção para o excerto de código apresentado que mitigue a vulnerabilidade e explique em que medida o problema é resolvido.
+    Resposta: A correção para o código apresentado envolve fechar o file descriptor (dfd) imediatamente após a chamada de setuid, 
+    garantindo que o processo não mantenha acesso ao diretório /root após reduzir os privilégios. Isso pode ser feito adicionando 
+    a linha "close(dfd);" logo após a chamada de setuid(getuid()). Com essa correção, o processo não terá mais acesso ao 
+    diretório /root, mesmo que um atacante tente explorar a vulnerabilidade, mitigando assim o risco de acesso não autorizado e escalada de privilégios.
+
 */

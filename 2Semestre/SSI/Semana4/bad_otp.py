@@ -1,12 +1,38 @@
-##otp.py - One-Time-Pad Cipher
+##bad_otp.py - One-Time-Pad com PRNG inseguro
+
+"""
+Demonstração de como um gerador de números aleatórios inseguro
+compromete a segurança do One-Time-Pad.
+
+AVISO: Este programa é apenas para fins educacionais.
+Mostra como a qualidade do PRNG é crítica em criptografia.
+"""
 
 import sys
-import secrets
+import random
+
+def bad_prng(n):
+    """
+    Gerador de números pseudo-aleatórios INSEGURO.
+    
+    NUNCA usar em aplicações reais!
+    
+    Usa apenas 2 bytes de seed, resultando em apenas 2^16 = 65.536
+    possibilidades diferentes de sequências, tornando vulnerável a
+    ataques de brute force.
+    """
+    # Seed com apenas 2 bytes = 2^16 possibilidades
+    random.seed(random.randbytes(2))
+    return random.randbytes(n)
 
 def setup(num_bytes, filename):
-    """Gera uma chave aleatória criptograficamente segura e salva em ficheiro"""
-    # Usar secrets para números aleatórios criptograficamente seguros
-    key = secrets.token_bytes(num_bytes)
+    """
+    Gera uma chave "aleatória" usando o PRNG inseguro.
+    
+    A chave gerada é vulnerável porque há apenas 2^16 possíveis chaves!
+    """
+    # Usar o gerador inseguro em vez de secrets
+    key = bad_prng(num_bytes)
     with open(filename, 'wb') as f:
         f.write(key)
 
@@ -58,14 +84,14 @@ def dec(ctxt_file, key_file):
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Uso: python3 otp.py <setup|enc|dec> [argumentos]", file=sys.stderr)
+        print("Uso: python3 bad_otp.py <setup|enc|dec> [argumentos]", file=sys.stderr)
         sys.exit(1)
     
     operacao = sys.argv[1]
     
     if operacao == "setup":
         if len(sys.argv) != 4:
-            print("Uso: python3 otp.py setup <num_bytes> <ficheiro_chave>", file=sys.stderr)
+            print("Uso: python3 bad_otp.py setup <num_bytes> <ficheiro_chave>", file=sys.stderr)
             sys.exit(1)
         num_bytes = int(sys.argv[2])
         filename = sys.argv[3]
@@ -73,7 +99,7 @@ if __name__ == "__main__":
     
     elif operacao == "enc":
         if len(sys.argv) != 4:
-            print("Uso: python3 otp.py enc <ficheiro_texto> <ficheiro_chave>", file=sys.stderr)
+            print("Uso: python3 bad_otp.py enc <ficheiro_texto> <ficheiro_chave>", file=sys.stderr)
             sys.exit(1)
         ptxt_file = sys.argv[2]
         key_file = sys.argv[3]
@@ -81,7 +107,7 @@ if __name__ == "__main__":
     
     elif operacao == "dec":
         if len(sys.argv) != 4:
-            print("Uso: python3 otp.py dec <ficheiro_criptograma> <ficheiro_chave>", file=sys.stderr)
+            print("Uso: python3 bad_otp.py dec <ficheiro_criptograma> <ficheiro_chave>", file=sys.stderr)
             sys.exit(1)
         ctxt_file = sys.argv[2]
         key_file = sys.argv[3]
@@ -90,13 +116,3 @@ if __name__ == "__main__":
     else:
         print("Erro: Operação deve ser 'setup', 'enc' ou 'dec'", file=sys.stderr)
         sys.exit(1)
-
-"""
-  $ python3 otp.py setup 30 otp.key
-  $ echo "Mensagem a cifrar" > ptxt.txt
-  $ python3 otp.py enc ptxt.txt otp.key > ptxt.txt.enc
-  $ python3 otp.py dec ptxt.txt.enc otp.key > ptxt.txt.enc.dec
-  $ cat ptxt.txt.enc.dec
-  Mensagem a cifrar
-
-"""

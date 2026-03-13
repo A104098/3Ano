@@ -1,6 +1,6 @@
-^C:\USERS\EDUARDA\DOWNLOADS\SOURCE AND CMAKE FILES (1)\BUILD\CMAKEFILES\C3708A741CF68D256957A9C4E21AC7A7\GENERATE.STAMP.RULE
+^C:\USERS\EDUARDA\3ANO\2SEMESTRE\CG\SEMANA5\SOURCE AND CMAKE FILES (1)\BUILD\CMAKEFILES\4A1920FD3B1A4AC1032D078FF7CCA3D6\GENERATE.STAMP.RULE
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Eduarda/Downloads/source and cmake files (1)" "-BC:/Users/Eduarda/Downloads/source and cmake files (1)/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/Eduarda/Downloads/source and cmake files (1)/build/class6.sln"
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Eduarda/3Ano/2Semestre/CG/Semana5/source and cmake files (1)" "-BC:/Users/Eduarda/3Ano/2Semestre/CG/Semana5/source and cmake files (1)/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/Eduarda/3Ano/2Semestre/CG/Semana5/source and cmake files (1)/build/class5.sln"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

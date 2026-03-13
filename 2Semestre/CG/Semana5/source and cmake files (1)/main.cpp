@@ -1,26 +1,25 @@
-
-
-#include<stdio.h>
-#include<stdlib.h>
-
-#define _USE_MATH_DEFINES
-#include <math.h>
-#include <vector>
-
-#include <IL/il.h>
+#include <stdio.h>
 
 #ifdef __APPLE__
 #include <GLUT/glut.h>
 #else
-#include <GL/glew.h>
 #include <GL/glut.h>
 #endif
 
+#define _USE_MATH_DEFINES
+#include <math.h>
 
-float camX = 00, camY = 30, camZ = 40;
-int startX, startY, tracking = 0;
+float alfa = 0.0f, beta = 0.5f, radius = 100.0f;
+float camX, camY, camZ;
 
-int alpha = 0, beta = 45, r = 50;
+
+void spherical2Cartesian() {
+
+	camX = radius * cos(beta) * sin(alfa);
+	camY = radius * sin(beta);
+	camZ = radius * cos(beta) * cos(alfa);
+}
+
 
 void changeSize(int w, int h) {
 
@@ -32,15 +31,16 @@ void changeSize(int w, int h) {
 	// compute window's aspect ratio 
 	float ratio = w * 1.0 / h;
 
-	// Reset the coordinate system before modifying
+	// Set the projection matrix as current
 	glMatrixMode(GL_PROJECTION);
+	// Load Identity Matrix
 	glLoadIdentity();
 	
 	// Set the viewport to be the entire window
     glViewport(0, 0, w, h);
 
-	// Set the correct perspective
-	gluPerspective(45,ratio,1,1000);
+	// Set perspective
+	gluPerspective(45.0f ,ratio, 1.0f ,1000.0f);
 
 	// return to the model view matrix mode
 	glMatrixMode(GL_MODELVIEW);
@@ -48,120 +48,85 @@ void changeSize(int w, int h) {
 
 
 
-void drawTerrain() {
-
-    // colocar aqui o código de desnho do terreno usando VBOs com TRIANGLE_STRIPS
-}
-
-
-
 void renderScene(void) {
 
-	float pos[4] = {-1.0, 1.0, 1.0, 0.0};
-
-	glClearColor(0.0f,0.0f,0.0f,0.0f);
+	// clear buffers
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+	// set the camera
 	glLoadIdentity();
-	gluLookAt(camX, camY, camZ, 
-		      0.0,0.0,0.0,
-			  0.0f,1.0f,0.0f);
+	gluLookAt(camX, camY, camZ,
+		0.0, 0.0, 0.0,
+		0.0f, 1.0f, 0.0f);
 
-	drawTerrain();
+	glColor3f(0.2f, 0.8f, 0.2f);
+	glBegin(GL_TRIANGLES);
+		glVertex3f(100.0f, 0, -100.0f);
+		glVertex3f(-100.0f, 0, -100.0f);
+		glVertex3f(-100.0f, 0, 100.0f);
 
-	// just so that it renders something before the terrain is built
-	// to erase when the terrain is ready
-	glutWireTeapot(2.0);
-
-// End of frame
+		glVertex3f(100.0f, 0, -100.0f);
+		glVertex3f(-100.0f, 0, 100.0f);
+		glVertex3f(100.0f, 0, 100.0f);
+	glEnd();
+	
+	// put code to draw scene in here
+	
+	
 	glutSwapBuffers();
 }
 
 
-
-void processKeys(unsigned char key, int xx, int yy) {
+void processKeys(unsigned char c, int xx, int yy) {
 
 // put code to process regular keys in here
+
 }
 
 
+void processSpecialKeys(int key, int xx, int yy) {
 
-void processMouseButtons(int button, int state, int xx, int yy) {
-	
-	if (state == GLUT_DOWN)  {
-		startX = xx;
-		startY = yy;
-		if (button == GLUT_LEFT_BUTTON)
-			tracking = 1;
-		else if (button == GLUT_RIGHT_BUTTON)
-			tracking = 2;
-		else
-			tracking = 0;
+	switch (key) {
+
+	case GLUT_KEY_RIGHT:
+		alfa -= 0.1; break;
+
+	case GLUT_KEY_LEFT:
+		alfa += 0.1; break;
+
+	case GLUT_KEY_UP:
+		beta += 0.1f;
+		if (beta > 1.5f)
+			beta = 1.5f;
+		break;
+
+	case GLUT_KEY_DOWN:
+		beta -= 0.1f;
+		if (beta < -1.5f)
+			beta = -1.5f;
+		break;
+
+	case GLUT_KEY_PAGE_DOWN: radius -= 1.0f;
+		if (radius < 1.0f)
+			radius = 1.0f;
+		break;
+
+	case GLUT_KEY_PAGE_UP: radius += 1.0f; break;
 	}
-	else if (state == GLUT_UP) {
-		if (tracking == 1) {
-			alpha += (xx - startX);
-			beta += (yy - startY);
-		}
-		else if (tracking == 2) {
-			
-			r -= yy - startY;
-			if (r < 3)
-				r = 3.0;
-		}
-		tracking = 0;
-	}
+	spherical2Cartesian();
+	glutPostRedisplay();
+
 }
 
 
-void processMouseMotion(int xx, int yy) {
+void printInfo() {
 
-	int deltaX, deltaY;
-	int alphaAux, betaAux;
-	int rAux;
+	printf("Vendor: %s\n", glGetString(GL_VENDOR));
+	printf("Renderer: %s\n", glGetString(GL_RENDERER));
+	printf("Version: %s\n", glGetString(GL_VERSION));
 
-	if (!tracking)
-		return;
-
-	deltaX = xx - startX;
-	deltaY = yy - startY;
-
-	if (tracking == 1) {
-
-
-		alphaAux = alpha + deltaX;
-		betaAux = beta + deltaY;
-
-		if (betaAux > 85.0)
-			betaAux = 85.0;
-		else if (betaAux < -85.0)
-			betaAux = -85.0;
-
-		rAux = r;
-	}
-	else if (tracking == 2) {
-
-		alphaAux = alpha;
-		betaAux = beta;
-		rAux = r - deltaY;
-		if (rAux < 3)
-			rAux = 3;
-	}
-	camX = rAux * sin(alphaAux * 3.14 / 180.0) * cos(betaAux * 3.14 / 180.0);
-	camZ = rAux * cos(alphaAux * 3.14 / 180.0) * cos(betaAux * 3.14 / 180.0);
-	camY = rAux * 							     sin(betaAux * 3.14 / 180.0);
-}
-
-
-void init() {
-
-// 	Load the height map "terreno.jpg"
-
-// 	Build the vertex arrays
-
-// 	OpenGL settings
-	glEnable(GL_DEPTH_TEST);
-	//glEnable(GL_CULL_FACE);
+	printf("\nUse Arrows to move the camera up/down and left/right\n");
+	printf("Home and End control the distance from the camera to the origin");
 }
 
 
@@ -171,25 +136,27 @@ int main(int argc, char **argv) {
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DEPTH|GLUT_DOUBLE|GLUT_RGBA);
 	glutInitWindowPosition(100,100);
-	glutInitWindowSize(320,320);
+	glutInitWindowSize(800,800);
 	glutCreateWindow("CG@DI-UM");
 		
-
 // Required callback registry 
 	glutDisplayFunc(renderScene);
-	glutIdleFunc(renderScene);
 	glutReshapeFunc(changeSize);
-
+	
 // Callback registration for keyboard processing
 	glutKeyboardFunc(processKeys);
-	glutMouseFunc(processMouseButtons);
-	glutMotionFunc(processMouseMotion);
+	glutSpecialFunc(processSpecialKeys);
 
-	init();	
+//  OpenGL settings
+	glEnable(GL_DEPTH_TEST);
+	glEnable(GL_CULL_FACE);
+
+	spherical2Cartesian();
+
+	printInfo();
 
 // enter GLUT's main cycle
 	glutMainLoop();
 	
-	return 0;
+	return 1;
 }
-

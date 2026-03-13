@@ -74,9 +74,9 @@ events:
       The output was:
       0
       MSBuild version 17.14.23+b0019275e for .NET Framework
-      Build started 13/03/2026 15:22:13.
+      Build started 13/03/2026 15:28:57.
       
-      Project "C:\\Users\\Eduarda\\Downloads\\source and cmake files (1)\\build\\CMakeFiles\\4.2.3\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
+      Project "C:\\Users\\Eduarda\\3Ano\\2Semestre\\CG\\Semana5\\source and cmake files (1)\\build\\CMakeFiles\\4.2.3\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
       PrepareForBuild:
         Creating directory "Debug\\".
         Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
@@ -89,7 +89,7 @@ events:
         CMakeCCompilerId.c
       Link:
         C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x86\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X86 /SAFESEH Debug\\CMakeCCompilerId.obj
-        CompilerIdC.vcxproj -> C:\\Users\\Eduarda\\Downloads\\source and cmake files (1)\\build\\CMakeFiles\\4.2.3\\CompilerIdC\\CompilerIdC.exe
+        CompilerIdC.vcxproj -> C:\\Users\\Eduarda\\3Ano\\2Semestre\\CG\\Semana5\\source and cmake files (1)\\build\\CMakeFiles\\4.2.3\\CompilerIdC\\CompilerIdC.exe
       PostBuildEvent:
         for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
         :VCEnd
@@ -97,13 +97,13 @@ events:
       FinalizeBuildStatus:
         Deleting file "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
         Touching "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
-      Done Building Project "C:\\Users\\Eduarda\\Downloads\\source and cmake files (1)\\build\\CMakeFiles\\4.2.3\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
+      Done Building Project "C:\\Users\\Eduarda\\3Ano\\2Semestre\\CG\\Semana5\\source and cmake files (1)\\build\\CMakeFiles\\4.2.3\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
       
       Build succeeded.
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:00.59
+      Time Elapsed 00:00:00.45
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -111,7 +111,7 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
       
       The C compiler identification is MSVC, found in:
-        C:/Users/Eduarda/Downloads/source and cmake files (1)/build/CMakeFiles/4.2.3/CompilerIdC/CompilerIdC.exe
+        C:/Users/Eduarda/3Ano/2Semestre/CG/Semana5/source and cmake files (1)/build/CMakeFiles/4.2.3/CompilerIdC/CompilerIdC.exe
       
   -
     kind: "find-v1"
@@ -685,9 +685,9 @@ events:
       The output was:
       0
       MSBuild version 17.14.23+b0019275e for .NET Framework
-      Build started 13/03/2026 15:22:14.
+      Build started 13/03/2026 15:28:58.
       
-      Project "C:\\Users\\Eduarda\\Downloads\\source and cmake files (1)\\build\\CMakeFiles\\4.2.3\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+      Project "C:\\Users\\Eduarda\\3Ano\\2Semestre\\CG\\Semana5\\source and cmake files (1)\\build\\CMakeFiles\\4.2.3\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
       PrepareForBuild:
         Creating directory "Debug\\".
         Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
@@ -700,7 +700,7 @@ events:
         CMakeCXXCompilerId.cpp
       Link:
         C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x86\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X86 /SAFESEH Debug\\CMakeCXXCompilerId.obj
-        CompilerIdCXX.vcxproj -> C:\\Users\\Eduarda\\Downloads\\source and cmake files (1)\\build\\CMakeFiles\\4.2.3\\CompilerIdCXX\\CompilerIdCXX.exe
+        CompilerIdCXX.vcxproj -> C:\\Users\\Eduarda\\3Ano\\2Semestre\\CG\\Semana5\\source and cmake files (1)\\build\\CMakeFiles\\4.2.3\\CompilerIdCXX\\CompilerIdCXX.exe
       PostBuildEvent:
         for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
         :VCEnd
@@ -708,13 +708,13 @@ events:
       FinalizeBuildStatus:
         Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
         Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
-      Done Building Project "C:\\Users\\Eduarda\\Downloads\\source and cmake files (1)\\build\\CMakeFiles\\4.2.3\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
+      Done Building Project "C:\\Users\\Eduarda\\3Ano\\2Semestre\\CG\\Semana5\\source and cmake files (1)\\build\\CMakeFiles\\4.2.3\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
       
       Build succeeded.
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:00.76
+      Time Elapsed 00:00:00.42
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -722,7 +722,7 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
       
       The CXX compiler identification is MSVC, found in:
-        C:/Users/Eduarda/Downloads/source and cmake files (1)/build/CMakeFiles/4.2.3/CompilerIdCXX/CompilerIdCXX.exe
+        C:/Users/Eduarda/3Ano/2Semestre/CG/Semana5/source and cmake files (1)/build/CMakeFiles/4.2.3/CompilerIdCXX/CompilerIdCXX.exe
       
   -
     kind: "find-v1"
@@ -924,9 +924,9 @@ events:
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/CMake/sbin/"
       - "C:/Program Files/CMake/"
-      - "C:/Program Files (x86)/class6/bin/"
-      - "C:/Program Files (x86)/class6/sbin/"
-      - "C:/Program Files (x86)/class6/"
+      - "C:/Program Files (x86)/class5/bin/"
+      - "C:/Program Files (x86)/class5/sbin/"
+      - "C:/Program Files (x86)/class5/"
     searched_directories:
       - "C:/Program Files/Common Files/Oracle/Java/javapath/rc.com"
       - "C:/Program Files/Common Files/Oracle/Java/javapath/rc.exe"
@@ -1024,15 +1024,15 @@ events:
       - "C:/Program Files/CMake/rc.com"
       - "C:/Program Files/CMake/rc.exe"
       - "C:/Program Files/CMake/rc"
-      - "C:/Program Files (x86)/class6/bin/rc.com"
-      - "C:/Program Files (x86)/class6/bin/rc.exe"
-      - "C:/Program Files (x86)/class6/bin/rc"
-      - "C:/Program Files (x86)/class6/sbin/rc.com"
-      - "C:/Program Files (x86)/class6/sbin/rc.exe"
-      - "C:/Program Files (x86)/class6/sbin/rc"
-      - "C:/Program Files (x86)/class6/rc.com"
-      - "C:/Program Files (x86)/class6/rc.exe"
-      - "C:/Program Files (x86)/class6/rc"
+      - "C:/Program Files (x86)/class5/bin/rc.com"
+      - "C:/Program Files (x86)/class5/bin/rc.exe"
+      - "C:/Program Files (x86)/class5/bin/rc"
+      - "C:/Program Files (x86)/class5/sbin/rc.com"
+      - "C:/Program Files (x86)/class5/sbin/rc.exe"
+      - "C:/Program Files (x86)/class5/sbin/rc"
+      - "C:/Program Files (x86)/class5/rc.com"
+      - "C:/Program Files (x86)/class5/rc.exe"
+      - "C:/Program Files (x86)/class5/rc"
     found: false
     search_context:
       ENV{PATH}:
@@ -1059,12 +1059,12 @@ events:
         - "C:\\Users\\Eduarda\\Downloads\\_temp_matlab_R2023b_win64\\extern\\lib\\win64\\mingw64\\mingw32\\bin"
         - "C:\\mingw64\\bin"
         - "C:\\Users\\Eduarda\\AppData\\Roaming\\npm"
-      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/class6"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/class5"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
         - "C:/Program Files (x86)"
         - "C:/Program Files/CMake"
-        - "C:/Program Files (x86)/class6"
+        - "C:/Program Files (x86)/class5"
   -
     kind: "try_compile-v1"
     backtrace:
@@ -1074,8 +1074,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/Eduarda/Downloads/source and cmake files (1)/build/CMakeFiles/CMakeScratch/TryCompile-a8u9go"
-      binary: "C:/Users/Eduarda/Downloads/source and cmake files (1)/build/CMakeFiles/CMakeScratch/TryCompile-a8u9go"
+      source: "C:/Users/Eduarda/3Ano/2Semestre/CG/Semana5/source and cmake files (1)/build/CMakeFiles/CMakeScratch/TryCompile-odhvp9"
+      binary: "C:/Users/Eduarda/3Ano/2Semestre/CG/Semana5/source and cmake files (1)/build/CMakeFiles/CMakeScratch/TryCompile-odhvp9"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
       CMAKE_EXE_LINKER_FLAGS: "/machine:X86"
@@ -1083,39 +1083,39 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/Eduarda/Downloads/source and cmake files (1)/build/CMakeFiles/CMakeScratch/TryCompile-a8u9go'
+        Change Dir: 'C:/Users/Eduarda/3Ano/2Semestre/CG/Semana5/source and cmake files (1)/build/CMakeFiles/CMakeScratch/TryCompile-odhvp9'
         
-        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_24ff1.vcxproj /p:Configuration=Debug /p:Platform=Win32 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_e87ab.vcxproj /p:Configuration=Debug /p:Platform=Win32 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.14.23+b0019275e for .NET Framework
-        Build started 13/03/2026 15:22:15.
+        Build started 13/03/2026 15:28:58.
         
-        Project "C:\\Users\\Eduarda\\Downloads\\source and cmake files (1)\\build\\CMakeFiles\\CMakeScratch\\TryCompile-a8u9go\\cmTC_24ff1.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\Eduarda\\3Ano\\2Semestre\\CG\\Semana5\\source and cmake files (1)\\build\\CMakeFiles\\CMakeScratch\\TryCompile-odhvp9\\cmTC_e87ab.vcxproj" on node 1 (default targets).
         PrepareForBuild:
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\Eduarda\\Downloads\\source and cmake files (1)\\build\\CMakeFiles\\CMakeScratch\\TryCompile-a8u9go\\Debug\\".
-          Creating directory "cmTC_24ff1.dir\\Debug\\cmTC_24ff1.tlog\\".
+          Creating directory "C:\\Users\\Eduarda\\3Ano\\2Semestre\\CG\\Semana5\\source and cmake files (1)\\build\\CMakeFiles\\CMakeScratch\\TryCompile-odhvp9\\Debug\\".
+          Creating directory "cmTC_e87ab.dir\\Debug\\cmTC_e87ab.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_24ff1.dir\\Debug\\cmTC_24ff1.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_24ff1.dir\\Debug\\cmTC_24ff1.tlog\\unsuccessfulbuild".
+          Creating "cmTC_e87ab.dir\\Debug\\cmTC_e87ab.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_e87ab.dir\\Debug\\cmTC_e87ab.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x86\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_24ff1.dir\\Debug\\\\" /Fd"cmTC_24ff1.dir\\Debug\\vc143.pdb" /external:W3 /TC /analyze- /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c"
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x86\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_e87ab.dir\\Debug\\\\" /Fd"cmTC_e87ab.dir\\Debug\\vc143.pdb" /external:W3 /TC /analyze- /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c"
           Microsoft (R) C/C++ Optimizing Compiler VersÃ£o 19.44.35217 para x86
           Copyright (C) Microsoft Corporation. Todos os direitos reservados.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_24ff1.dir\\Debug\\\\" /Fd"cmTC_24ff1.dir\\Debug\\vc143.pdb" /external:W3 /TC /analyze- /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_e87ab.dir\\Debug\\\\" /Fd"cmTC_e87ab.dir\\Debug\\vc143.pdb" /external:W3 /TC /analyze- /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c"
           CMakeCCompilerABI.c
         Link:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x86\\link.exe /OUT:"C:\\Users\\Eduarda\\Downloads\\source and cmake files (1)\\build\\CMakeFiles\\CMakeScratch\\TryCompile-a8u9go\\Debug\\cmTC_24ff1.exe" /INCREMENTAL /ILK:"cmTC_24ff1.dir\\Debug\\cmTC_24ff1.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Eduarda/Downloads/source and cmake files (1)/build/CMakeFiles/CMakeScratch/TryCompile-a8u9go/Debug/cmTC_24ff1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/Eduarda/Downloads/source and cmake files (1)/build/CMakeFiles/CMakeScratch/TryCompile-a8u9go/Debug/cmTC_24ff1.lib" /MACHINE:X86  /machine:X86 cmTC_24ff1.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_24ff1.vcxproj -> C:\\Users\\Eduarda\\Downloads\\source and cmake files (1)\\build\\CMakeFiles\\CMakeScratch\\TryCompile-a8u9go\\Debug\\cmTC_24ff1.exe
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x86\\link.exe /OUT:"C:\\Users\\Eduarda\\3Ano\\2Semestre\\CG\\Semana5\\source and cmake files (1)\\build\\CMakeFiles\\CMakeScratch\\TryCompile-odhvp9\\Debug\\cmTC_e87ab.exe" /INCREMENTAL /ILK:"cmTC_e87ab.dir\\Debug\\cmTC_e87ab.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Eduarda/3Ano/2Semestre/CG/Semana5/source and cmake files (1)/build/CMakeFiles/CMakeScratch/TryCompile-odhvp9/Debug/cmTC_e87ab.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/Eduarda/3Ano/2Semestre/CG/Semana5/source and cmake files (1)/build/CMakeFiles/CMakeScratch/TryCompile-odhvp9/Debug/cmTC_e87ab.lib" /MACHINE:X86  /machine:X86 cmTC_e87ab.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_e87ab.vcxproj -> C:\\Users\\Eduarda\\3Ano\\2Semestre\\CG\\Semana5\\source and cmake files (1)\\build\\CMakeFiles\\CMakeScratch\\TryCompile-odhvp9\\Debug\\cmTC_e87ab.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_24ff1.dir\\Debug\\cmTC_24ff1.tlog\\unsuccessfulbuild".
-          Touching "cmTC_24ff1.dir\\Debug\\cmTC_24ff1.tlog\\cmTC_24ff1.lastbuildstate".
-        Done Building Project "C:\\Users\\Eduarda\\Downloads\\source and cmake files (1)\\build\\CMakeFiles\\CMakeScratch\\TryCompile-a8u9go\\cmTC_24ff1.vcxproj" (default targets).
+          Deleting file "cmTC_e87ab.dir\\Debug\\cmTC_e87ab.tlog\\unsuccessfulbuild".
+          Touching "cmTC_e87ab.dir\\Debug\\cmTC_e87ab.tlog\\cmTC_e87ab.lastbuildstate".
+        Done Building Project "C:\\Users\\Eduarda\\3Ano\\2Semestre\\CG\\Semana5\\source and cmake files (1)\\build\\CMakeFiles\\CMakeScratch\\TryCompile-odhvp9\\cmTC_e87ab.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.81
+        Time Elapsed 00:00:00.39
         
       exitCode: 0
   -
@@ -1155,8 +1155,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/Eduarda/Downloads/source and cmake files (1)/build/CMakeFiles/CMakeScratch/TryCompile-nhrm9g"
-      binary: "C:/Users/Eduarda/Downloads/source and cmake files (1)/build/CMakeFiles/CMakeScratch/TryCompile-nhrm9g"
+      source: "C:/Users/Eduarda/3Ano/2Semestre/CG/Semana5/source and cmake files (1)/build/CMakeFiles/CMakeScratch/TryCompile-vukkmq"
+      binary: "C:/Users/Eduarda/3Ano/2Semestre/CG/Semana5/source and cmake files (1)/build/CMakeFiles/CMakeScratch/TryCompile-vukkmq"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
@@ -1165,39 +1165,39 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/Eduarda/Downloads/source and cmake files (1)/build/CMakeFiles/CMakeScratch/TryCompile-nhrm9g'
+        Change Dir: 'C:/Users/Eduarda/3Ano/2Semestre/CG/Semana5/source and cmake files (1)/build/CMakeFiles/CMakeScratch/TryCompile-vukkmq'
         
-        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_b1855.vcxproj /p:Configuration=Debug /p:Platform=Win32 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_95e5d.vcxproj /p:Configuration=Debug /p:Platform=Win32 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.14.23+b0019275e for .NET Framework
-        Build started 13/03/2026 15:22:17.
+        Build started 13/03/2026 15:28:59.
         
-        Project "C:\\Users\\Eduarda\\Downloads\\source and cmake files (1)\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nhrm9g\\cmTC_b1855.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\Eduarda\\3Ano\\2Semestre\\CG\\Semana5\\source and cmake files (1)\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vukkmq\\cmTC_95e5d.vcxproj" on node 1 (default targets).
         PrepareForBuild:
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\Eduarda\\Downloads\\source and cmake files (1)\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nhrm9g\\Debug\\".
-          Creating directory "cmTC_b1855.dir\\Debug\\cmTC_b1855.tlog\\".
+          Creating directory "C:\\Users\\Eduarda\\3Ano\\2Semestre\\CG\\Semana5\\source and cmake files (1)\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vukkmq\\Debug\\".
+          Creating directory "cmTC_95e5d.dir\\Debug\\cmTC_95e5d.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_b1855.dir\\Debug\\cmTC_b1855.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_b1855.dir\\Debug\\cmTC_b1855.tlog\\unsuccessfulbuild".
+          Creating "cmTC_95e5d.dir\\Debug\\cmTC_95e5d.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_95e5d.dir\\Debug\\cmTC_95e5d.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x86\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_b1855.dir\\Debug\\\\" /Fd"cmTC_b1855.dir\\Debug\\vc143.pdb" /external:W3 /TP /analyze- /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp"
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x86\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_95e5d.dir\\Debug\\\\" /Fd"cmTC_95e5d.dir\\Debug\\vc143.pdb" /external:W3 /TP /analyze- /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp"
           Microsoft (R) C/C++ Optimizing Compiler VersÃ£o 19.44.35217 para x86
           Copyright (C) Microsoft Corporation. Todos os direitos reservados.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_b1855.dir\\Debug\\\\" /Fd"cmTC_b1855.dir\\Debug\\vc143.pdb" /external:W3 /TP /analyze- /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_95e5d.dir\\Debug\\\\" /Fd"cmTC_95e5d.dir\\Debug\\vc143.pdb" /external:W3 /TP /analyze- /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp"
           CMakeCXXCompilerABI.cpp
         Link:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x86\\link.exe /OUT:"C:\\Users\\Eduarda\\Downloads\\source and cmake files (1)\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nhrm9g\\Debug\\cmTC_b1855.exe" /INCREMENTAL /ILK:"cmTC_b1855.dir\\Debug\\cmTC_b1855.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Eduarda/Downloads/source and cmake files (1)/build/CMakeFiles/CMakeScratch/TryCompile-nhrm9g/Debug/cmTC_b1855.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/Eduarda/Downloads/source and cmake files (1)/build/CMakeFiles/CMakeScratch/TryCompile-nhrm9g/Debug/cmTC_b1855.lib" /MACHINE:X86  /machine:X86 cmTC_b1855.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_b1855.vcxproj -> C:\\Users\\Eduarda\\Downloads\\source and cmake files (1)\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nhrm9g\\Debug\\cmTC_b1855.exe
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x86\\link.exe /OUT:"C:\\Users\\Eduarda\\3Ano\\2Semestre\\CG\\Semana5\\source and cmake files (1)\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vukkmq\\Debug\\cmTC_95e5d.exe" /INCREMENTAL /ILK:"cmTC_95e5d.dir\\Debug\\cmTC_95e5d.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Eduarda/3Ano/2Semestre/CG/Semana5/source and cmake files (1)/build/CMakeFiles/CMakeScratch/TryCompile-vukkmq/Debug/cmTC_95e5d.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/Eduarda/3Ano/2Semestre/CG/Semana5/source and cmake files (1)/build/CMakeFiles/CMakeScratch/TryCompile-vukkmq/Debug/cmTC_95e5d.lib" /MACHINE:X86  /machine:X86 cmTC_95e5d.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_95e5d.vcxproj -> C:\\Users\\Eduarda\\3Ano\\2Semestre\\CG\\Semana5\\source and cmake files (1)\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vukkmq\\Debug\\cmTC_95e5d.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_b1855.dir\\Debug\\cmTC_b1855.tlog\\unsuccessfulbuild".
-          Touching "cmTC_b1855.dir\\Debug\\cmTC_b1855.tlog\\cmTC_b1855.lastbuildstate".
-        Done Building Project "C:\\Users\\Eduarda\\Downloads\\source and cmake files (1)\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nhrm9g\\cmTC_b1855.vcxproj" (default targets).
+          Deleting file "cmTC_95e5d.dir\\Debug\\cmTC_95e5d.tlog\\unsuccessfulbuild".
+          Touching "cmTC_95e5d.dir\\Debug\\cmTC_95e5d.tlog\\cmTC_95e5d.lastbuildstate".
+        Done Building Project "C:\\Users\\Eduarda\\3Ano\\2Semestre\\CG\\Semana5\\source and cmake files (1)\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vukkmq\\cmTC_95e5d.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.80
+        Time Elapsed 00:00:00.39
         
       exitCode: 0
   -
